@@ -66,18 +66,18 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .sheet-head div{padding:10px 16px;border-left:1px solid var(--rule);font:500 13px/1.35 var(--f-head);color:var(--ink-2)}
 .sheet-head div:first-child{border-left:0}
 .sheet-head b{display:block;font-weight:700;color:var(--ink);font-size:15px}
-.intro{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);padding:clamp(24px,4vw,48px) clamp(18px,3vw,40px) 28px;align-items:end}
-.intro h1{font-size:clamp(2.4rem,1.6rem + 3.4vw,4.6rem);line-height:.98;font-weight:800;font-stretch:112%;letter-spacing:-.01em}
+.intro{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);padding:clamp(20px,3vw,32px) clamp(18px,3vw,40px) 22px;align-items:start}
+.intro h1{font-size:clamp(2.2rem,1.5rem + 2.6vw,3.7rem);line-height:1;font-weight:800;font-stretch:112%;letter-spacing:-.01em}
 .intro h1 em{font-style:normal;background:linear-gradient(transparent 58%,var(--hl) 58% 92%,transparent 92%)}
-.intro .lead{font-size:clamp(1.05rem,1rem + .3vw,1.25rem);max-width:46ch;margin-top:16px;color:var(--ink)}
+.intro .lead{font-size:clamp(1.05rem,1rem + .3vw,1.2rem);max-width:56ch;margin-top:12px;color:var(--ink)}
 .intro .sig{margin-top:10px}
 
 /* profile selector */
 .start{border-left:1.5px solid var(--ink);padding-left:clamp(16px,2.5vw,32px)}
 .start h2{font-size:1.35rem;font-stretch:105%;font-weight:800}
 .start p{color:var(--ink-2);font-size:15px;margin-top:4px}
-.profiles{display:flex;flex-direction:column;gap:8px;margin-top:14px}
-.prof{appearance:none;border:1.5px solid var(--ink);background:var(--sheet);border-radius:6px;min-height:56px;padding:10px 14px;text-align:left;cursor:pointer;display:flex;align-items:center;gap:12px;font:700 16px/1.3 var(--f-head)}
+.profiles{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.prof{appearance:none;border:1.5px solid var(--ink);background:var(--sheet);border-radius:6px;min-height:52px;padding:8px 14px;text-align:left;cursor:pointer;display:flex;align-items:center;gap:12px;font:700 16px/1.3 var(--f-head)}
 .prof small{display:block;font:400 14px/1.3 var(--f-read);color:var(--ink-2);margin-top:2px}
 .prof .box{width:22px;height:22px;border:1.5px solid var(--ink);border-radius:50%;flex:none;display:grid;place-items:center}
 .prof[aria-checked="true"]{background:var(--hl)}
@@ -86,7 +86,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .prof[aria-checked="true"]:hover{background:var(--hl)}
 
 /* correlativities map */
-.map{position:relative;border-top:1.5px solid var(--ink);padding:22px clamp(14px,2.5vw,32px) 26px;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;background-position:-1px -1px}
+.map{position:relative;border-top:1.5px solid var(--ink);padding:16px clamp(14px,2.5vw,32px) 26px;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;background-position:-1px -1px}
 .map-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:16px}
 .map-head h2{font-size:1.15rem;font-weight:800;font-stretch:110%;text-transform:uppercase;letter-spacing:.04em}
 .map-head p{font-size:15px;color:var(--ink-2)}
@@ -98,8 +98,9 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .node small{display:block;font:400 13px/1.3 var(--f-read);color:var(--ink-2);margin-top:3px}
 .node:hover{background:var(--paper-2)}
 .node.on{background:var(--hl)}
-.node.dim{opacity:.45}
-.node.ave::before{content:"";position:absolute;left:-1.5px;top:-1.5px;bottom:-1.5px;width:6px;background:var(--ave);border-radius:6px 0 0 6px}
+.node.dim{border-color:var(--rule);background:transparent;color:var(--ink-2)}
+.node.dim small{color:var(--ink-2)}
+.seal{display:inline-block;font:800 11px/1 var(--f-head);text-transform:uppercase;letter-spacing:.05em;color:var(--ave);border:1.5px solid var(--ave);border-radius:3px;padding:3px 5px;margin-top:6px}
 .wires{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:visible}
 .wires path{fill:none;stroke:var(--ink-3);stroke-width:1.5}
 .wires path.req{stroke-dasharray:5 5}
@@ -110,7 +111,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .legend i{display:inline-block;width:28px;height:0;border-top:1.5px solid var(--ink-3)}
 .legend i.d{border-top-style:dashed}
 .legend i.h{height:10px;border:0;background:var(--hl)}
-.legend i.a{width:10px;height:16px;border:0;background:var(--ave);border-radius:2px}
+.legend i.a{width:16px;height:12px;border:1.5px solid var(--ave);border-radius:2px}
 .pathnote{margin-top:14px;min-height:1.6em}
 
 /* catalogue */
@@ -127,9 +128,10 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .group-head h3{font-size:1.5rem;font-weight:800;font-stretch:108%}
 .group-head p{color:var(--ink-2);font-size:15px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
-.ficha{background:var(--sheet);border:1.5px solid var(--ink);border-radius:8px;display:flex;flex-direction:column;position:relative;scroll-margin-top:90px}
-.ficha.ave{border-top:6px solid var(--ave)}
+.ficha{background:var(--sheet);border:1.5px solid var(--ink);border-radius:2px;display:flex;flex-direction:column;position:relative;scroll-margin-top:90px}
 .ficha.rec{box-shadow:0 0 0 4px var(--hl)}
+.ficha.rec .f-top{background:linear-gradient(transparent 0,var(--hl) 0)}
+.f-top{border-bottom:1px solid var(--rule);padding-bottom:10px!important}
 .ficha.hide{display:none}
 .f-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 18px 0}
 .mod{font:600 13px/1.35 var(--f-head);color:var(--ink-2)}
@@ -156,7 +158,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 
 /* posgrados */
 .pos-cats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.pcat{background:var(--sheet);border:1.5px solid var(--ink);border-radius:8px;padding:16px 18px 10px}
+.pcat{background:var(--sheet);border:1.5px solid var(--ink);border-radius:2px;padding:16px 18px 10px}
 .pcat h4{font-size:1.2rem;font-weight:800;font-stretch:106%;margin-bottom:6px}
 .prow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;padding:10px 0;border-top:1px solid var(--rule)}
 .prow:first-of-type{border-top:0}
@@ -164,14 +166,14 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .prow p{font-size:15px;color:var(--ink-2);grid-column:1}
 .prow .when{font:600 13px/1.3 var(--f-head);color:var(--ink-2);text-align:right;white-space:nowrap}
 .prow .st{grid-column:2;justify-self:end;align-self:start}
-.tag{display:inline-block;font:700 12px/1 var(--f-head);padding:5px 8px;border-radius:999px;white-space:nowrap}
-.tag.rec{background:var(--paper-2);color:var(--ink-2)}
-.tag.now{background:var(--stamp);color:#fff}
-.tag.next{background:var(--hl);color:var(--ink)}
+.tag{display:inline-block;font:800 12px/1.1 var(--f-head);text-transform:uppercase;letter-spacing:.04em;padding:4px 6px;border:2px solid currentColor;border-radius:3px;transform:rotate(-2deg);white-space:nowrap}
+.tag.rec{color:var(--stamp-ok)}
+.tag.now{color:var(--stamp)}
+.tag.next{color:var(--ink)}
 .capel{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;background:var(--ink);color:#fff;border-radius:8px;padding:18px 20px;margin-bottom:18px}
 .capel h4{color:#fff;font-size:1.3rem;font-weight:800}
 .capel p{color:#D9DDF0;font-size:15px;margin-top:4px}
-.capel .btn{background:var(--hl);color:var(--ink)}
+.capel .btn{background:#fff;color:var(--ink)}
 .notice{border:1.5px dashed var(--ink);border-radius:8px;padding:14px 16px;font-size:15px;margin-bottom:18px;display:flex;gap:12px;align-items:flex-start}
 
 /* schedule */
@@ -179,7 +181,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .sched th{text-align:left;font-weight:700;padding:10px 14px;border-bottom:1.5px solid var(--ink);background:var(--paper-2)}
 .sched td{padding:9px 14px;border-top:1px solid var(--rule);vertical-align:top}
 .sched td.m{white-space:nowrap;font-weight:700}
-.sched tr.past td{color:var(--ink-3)}
+.sched tr.past td{color:var(--ink-2)}
 .sched tr.now td{background:var(--hl)}
 .sched-wrap{overflow-x:auto;margin-top:18px}
 
@@ -209,7 +211,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
   .sheet-head div:nth-child(n+3){border-top:1px solid var(--rule)}
   .cols{grid-template-columns:minmax(0,1fr);gap:22px}
   .wires{display:none}
-  .node .after{display:block}
+  .cols .node .after{display:block}
   .grid{grid-template-columns:minmax(0,1fr)}
   .tnav{display:none}
   .brand b{font-size:17px}
@@ -217,6 +219,13 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
   .top .wrap{gap:12px}
   .capel{grid-template-columns:minmax(0,1fr)}
   .prow{grid-template-columns:minmax(0,1fr)}
+  .sched thead{display:none}
+  .sched,.sched tbody,.sched tr,.sched td{display:block;width:100%}
+  .sched tr{border-top:1px solid var(--rule);padding:8px 0}
+  .sched td{border:0;padding:2px 14px}
+  .sched td:nth-child(2)::before{content:"Protocolo: ";font-weight:700}
+  .sched td:nth-child(3)::before{content:"Seminario: ";font-weight:700}
+  .sched td:empty{display:none}
   .prow .when{text-align:left}
   .prow .st{grid-column:1;justify-self:start}
 }
@@ -279,7 +288,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
         <span><i></i>Te prepara para</span>
         <span><i class="d"></i>Requisito obligatorio</span>
         <span><i class="h"></i>Tu camino</span>
-        <span><i class="a"></i>Comunidad Ave Mujer</span>
+        <span><i class="a"></i>Sello: comunidad Ave Mujer</span>
       </div>
       <p class="hand pathnote" id="pathnote" aria-live="polite"></p>
     </div>
@@ -318,6 +327,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
         <div><h4>Actualización de Capelinas · disponible todo el año</h4><p>Fundamental antes de cualquier posgrado. Dos videos de más de 3 horas, vademécum y un encuentro de consulta a convenir.</p></div>
         <a class="btn sm" href="https://wa.link/jn0zk4" target="_blank" rel="noopener">Consultar</a>
       </div>
+      <p class="hand" style="margin:-4px 0 14px">Si te perdiste un protocolo, está grabado: lo tomás cuando quieras.</p>
       <div class="pos-cats" id="g-posgrado"></div>
       <div class="group-head" style="margin-top:36px"><h3>Plan de cursada 2026–2027</h3><p>Qué protocolo se dicta cada mes. Este mes está resaltado.</p></div>
       <div class="sched-wrap"><table class="sched" id="sched"><caption class="sr">Cronograma de posgrados 2026 a 2027</caption><thead><tr><th scope="col">Mes</th><th scope="col">Protocolo</th><th scope="col">Seminario</th></tr></thead><tbody></tbody></table></div>
@@ -433,7 +443,7 @@ var POS=[
   ["Los Cambios Necesarios para la Relación de Pareja","Conflictos de parejas consolidadas o ancestrales que resuenan hoy.",["2027-06"]],
   ["Los 7 Estadíos","El camino a la pareja ideal; también para embarazos o proyectos.",["2027-07"]]]}
 ];
-var SCHED=[["2026-02","La Rayuela · La Sombra",""],["2026-03","Alergias","Obesidad · módulo 1"],["2026-04","Sanación a Distancia y Emergencia","Obesidad · módulo 2"],["2026-05","El Hígado · parte 1","Obesidad · módulo 3"],["2026-06","El Hígado · parte 2","Obesidad · módulo 4"],["2026-07","Toma Tu Vida","Obesidad · módulo 5"],["2026-08","Trabajo del Pericardio","Memoria de Órganos · módulo 1"],["2026-09","¿Quién soy yo…?","Memoria de Órganos · módulo 1"],["2026-10","Archivos Lumínicos · sáb 17/10","Memoria de Órganos · módulo 2 · sáb 17/10"],["2026-11","Multiplicidad de Yoes · parte 1","Memoria de Órganos · módulo 3"],["2026-12","Multiplicidad de Yoes · parte 2","Memoria de Órganos · módulo 4"],["2027-01","Dos Baldosones","Memoria de Órganos · módulo 5"],["2027-02","Barra Dorada","Plataforma del Dinero · parte 1"],["2027-03","En Busca del Objetivo","Plataforma del Dinero · parte 2"],["2027-04","Feng Shui Neurológico","Acercando el Objetivo"],["2027-05","La Novela de mi Vida","Los Relojes del Inconsciente"],["2027-06","Cambios en la Pareja","La Sombra del Cuerpo Emocional"],["2027-07","Los 7 Estadíos de la Pareja","Memoria Intestinal"]];
+var SCHED=[["2026-02","La Rayuela · La Sombra",""],["2026-03","Alergias","Obesidad · módulo 1"],["2026-04","Sanación a Distancia y Emergencia","Obesidad · módulo 2"],["2026-05","El Hígado · parte 1","Obesidad · módulo 3"],["2026-06","El Hígado · parte 2","Obesidad · módulo 4"],["2026-07","Toma Tu Vida","Obesidad · módulo 5"],["2026-08","Trabajo del Pericardio","Memoria de Órganos · a confirmar"],["2026-09","¿Quién soy yo…?","Memoria de Órganos · módulo 1 · sáb 26/9"],["2026-10","Archivos Lumínicos · sáb 17/10","Memoria de Órganos · módulo 2 · sáb 17/10"],["2026-11","Multiplicidad de Yoes · parte 1","Memoria de Órganos · módulo 3"],["2026-12","Multiplicidad de Yoes · parte 2","Memoria de Órganos · módulo 4"],["2027-01","Dos Baldosones","Memoria de Órganos · módulo 5 (el 6 a confirmar)"],["2027-02","Barra Dorada","Plataforma del Dinero · parte 1"],["2027-03","En Busca del Objetivo","Plataforma del Dinero · parte 2"],["2027-04","Feng Shui Neurológico","Acercando el Objetivo"],["2027-05","La Novela de mi Vida","Los Relojes del Inconsciente"],["2027-06","Cambios en la Pareja","La Sombra del Cuerpo Emocional"],["2027-07","Los 7 Estadíos de la Pareja","Memoria Intestinal"]];
 var MO=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
 function mlabel(m){var p=m.split("-");return MO[+p[1]-1].charAt(0).toUpperCase()+MO[+p[1]-1].slice(1)+" "+p[0];}
 
@@ -445,7 +455,7 @@ var COLS=[
  {t:"Comunidad profesional",s:"Para facilitadoras",n:[["mastermind","MasterMind Ave Mujer","Requisito: mitad del básico, SIC o Flores Silvestres",1]]}
 ];
 var EDGES=[["celulas","mc"],["talleres","mc"],["mc","capelinas",1],["mc","posgrados",1],["capelinas","posgrados"],["flores1","flores2",1]];
-var AFTER={celulas:"después: Curso de Memoria Celular",talleres:"después: Curso de Memoria Celular",mc:"después: posgrados y MasterMind",flores1:"después: Profesorado y MasterMind",sic:"después: MasterMind",capelinas:"antes de cada posgrado"};
+var AFTER={celulas:"después: Curso de Memoria Celular",talleres:"después: Curso de Memoria Celular",mc:"después: posgrados y MasterMind",flores1:"después: Profesorado y MasterMind",sic:"después: MasterMind",membresia:"sin requisitos",flores2:"requiere: Flores Básico",dientes:"sin requisitos",transg:"sin requisitos",capelinas:"requiere: mitad del básico · antes de cada posgrado",posgrados:"requiere: mitad del básico"};
 var PROFILES={
  nuevo:{nodes:["celulas","talleres","sic","flores1","membresia","mc"],edges:["celulas>mc","talleres>mc"],note:"Empezá por el taller gratuito “Tus células hablan de ti”. Cuando quieras ir más profundo, el Curso de Memoria Celular te forma."},
  cursando:{nodes:["mc","capelinas","posgrados","mastermind","membresia"],edges:["mc>capelinas","mc>posgrados","capelinas>posgrados"],note:"Al llegar a la mitad del básico ya podés sumarte a los posgrados y al MasterMind. Empezá por Capelinas."},
@@ -456,7 +466,7 @@ var NODEMAP={talleres:"talleres",posgrados:"posgrados",capelinas:"posgrados"};
 function renderMap(){
   document.getElementById("cols").innerHTML=COLS.map(function(c){
     return '<div class="col"><h3>'+esc(c.t)+'<span>'+esc(c.s)+'</span></h3><div class="nodes">'+c.n.map(function(n){
-      return '<button type="button" class="node'+(n[3]?" ave":"")+'" data-node="'+n[0]+'">'+esc(n[1])+'<small>'+esc(n[2])+'</small>'+(AFTER[n[0]]?'<span class="after">'+esc(AFTER[n[0]])+'</span>':"")+'</button>';
+      return '<button type="button" class="node" data-node="'+n[0]+'">'+esc(n[1])+'<small>'+esc(n[2])+'</small>'+(AFTER[n[0]]?'<span class="after">'+esc(AFTER[n[0]])+'</span>':"")+(n[3]?'<span class="seal">Comunidad Ave Mujer</span>':"")+'</button>';
     }).join("")+'</div></div>';
   }).join("");
 }
@@ -495,7 +505,7 @@ function ficha(it){
   var ctaCls=it.cta[1]===WA?"btn wa sm":"btn ink sm";
   return '<article class="ficha'+(it.ave?" ave":"")+'" id="c-'+it.id+'" data-tipo="'+it.tipo+'" data-prof="'+it.prof.join(" ")+'">'+
     '<div class="f-top"><span class="mod">'+esc(it.mod)+'</span><span class="stamp '+(it.stamp[1]||"")+'">'+esc(it.stamp[0])+'</span></div>'+
-    '<div class="f-body"><span class="forme">recomendado para vos</span><h4>'+esc(it.title)+'</h4><p class="sub">'+esc(it.sub)+'</p><p class="desc">'+esc(it.desc)+'</p>'+
+    '<div class="f-body"><span class="forme">recomendado para vos</span>'+(it.ave?'<span class="seal" style="align-self:flex-start;margin:0">Comunidad Ave Mujer</span>':"")+'<h4>'+esc(it.title)+'</h4><p class="sub">'+esc(it.sub)+'</p><p class="desc">'+esc(it.desc)+'</p>'+
     '<dl class="req"><dt>Requisito</dt><dd>'+esc(it.req)+'</dd></dl>'+price+'</div>'+
     '<div class="acts"><a class="'+ctaCls+'" href="'+it.cta[1]+'" target="_blank" rel="noopener">'+(it.cta[1]===WA?'<svg class="i"><use href="#i-wa"/></svg>':"")+esc(it.cta[0])+(it.cta[1]===WA?"":'<svg class="i"><use href="#i-arrow"/></svg>')+'</a>'+
     (it.preview?'<a class="btn line sm" href="'+it.preview+'" target="_blank" rel="noopener"><svg class="i"><use href="#i-play"/></svg>Ver preview</a>':"")+'</div></article>';
