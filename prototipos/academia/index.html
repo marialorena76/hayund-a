@@ -1,0 +1,579 @@
+<title>Academia Hay un Día</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Caveat:wght@600&display=swap">
+<style>
+/* Layout: a framed study-plan sheet (header + profile selector + correlativities map), then the plan's "fichas" grouped by type, then the 2026–2027 posgrado schedule. */
+:root{
+  --paper:#F2F3EC;
+  --paper-2:#E7E9DE;
+  --sheet:#FCFCF7;
+  --ink:#1F2A5C;
+  --ink-2:#4A5380;
+  --ink-3:#6E7697;
+  --rule:#CBD0DC;
+  --grid:#E0E3EA;
+  --hl:#E9F36A;
+  --hl-deep:#D3E03A;
+  --stamp:#B0284A;
+  --stamp-ok:#1F6B4A;
+  --ave:#C9502A;
+  --wa:#1B7F4B;
+  --f-head:"Archivo", "Arial Narrow", system-ui, sans-serif;
+  --f-read:"Source Serif 4", Georgia, serif;
+  --f-hand:"Caveat", "Segoe Script", cursive;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--f-read);-webkit-font-smoothing:antialiased}
+::selection{background:var(--hl);color:var(--ink)}
+a{color:var(--ink);text-underline-offset:3px;text-decoration-thickness:1px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--stamp);outline-offset:2px;border-radius:4px}
+h1,h2,h3,h4{font-family:var(--f-head);color:var(--ink);margin:0;text-wrap:balance}
+p{margin:0}
+.num{font-variant-numeric:tabular-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:clamp(16px,4vw,48px)}
+.hand{font:600 1.5rem/1.15 var(--f-hand);color:var(--stamp)}
+
+.proto{background:var(--ink);color:#E8EBF5;font:500 13px/1.4 var(--f-head);text-align:center;padding:8px 16px}
+.proto b{color:var(--hl)}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:1.5px solid var(--ink)}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:64px}
+.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.brand b{font:800 20px/1 var(--f-head);font-stretch:118%;letter-spacing:.01em}
+.brand span{font:500 13px/1.2 var(--f-head);color:var(--ink-2);margin-top:4px}
+.tnav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
+.tnav a{font:700 15px/1 var(--f-head);text-decoration:none;padding:14px 12px;border-radius:6px}
+.tnav a:hover{background:var(--paper-2)}
+.btn{appearance:none;border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:6px;font:700 16px/1 var(--f-head);text-decoration:none;white-space:nowrap}
+.btn.ink{background:var(--ink);color:#fff}
+.btn.ink:hover{background:#2D3A78}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.line:hover{background:var(--paper-2)}
+.btn.wa{background:var(--wa);color:#fff}
+.btn.sm{min-height:44px;padding:10px 16px;font-size:15px}
+
+/* the sheet */
+.sheet{background:var(--sheet);border:1.5px solid var(--ink);margin-top:clamp(20px,3vw,36px);position:relative}
+.sheet-head{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1.5px solid var(--ink)}
+.sheet-head div{padding:10px 16px;border-left:1px solid var(--rule);font:500 13px/1.35 var(--f-head);color:var(--ink-2)}
+.sheet-head div:first-child{border-left:0}
+.sheet-head b{display:block;font-weight:700;color:var(--ink);font-size:15px}
+.intro{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);padding:clamp(24px,4vw,48px) clamp(18px,3vw,40px) 28px;align-items:end}
+.intro h1{font-size:clamp(2.4rem,1.6rem + 3.4vw,4.6rem);line-height:.98;font-weight:800;font-stretch:112%;letter-spacing:-.01em}
+.intro h1 em{font-style:normal;background:linear-gradient(transparent 58%,var(--hl) 58% 92%,transparent 92%)}
+.intro .lead{font-size:clamp(1.05rem,1rem + .3vw,1.25rem);max-width:46ch;margin-top:16px;color:var(--ink)}
+.intro .sig{margin-top:10px}
+
+/* profile selector */
+.start{border-left:1.5px solid var(--ink);padding-left:clamp(16px,2.5vw,32px)}
+.start h2{font-size:1.35rem;font-stretch:105%;font-weight:800}
+.start p{color:var(--ink-2);font-size:15px;margin-top:4px}
+.profiles{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.prof{appearance:none;border:1.5px solid var(--ink);background:var(--sheet);border-radius:6px;min-height:56px;padding:10px 14px;text-align:left;cursor:pointer;display:flex;align-items:center;gap:12px;font:700 16px/1.3 var(--f-head)}
+.prof small{display:block;font:400 14px/1.3 var(--f-read);color:var(--ink-2);margin-top:2px}
+.prof .box{width:22px;height:22px;border:1.5px solid var(--ink);border-radius:50%;flex:none;display:grid;place-items:center}
+.prof[aria-checked="true"]{background:var(--hl)}
+.prof[aria-checked="true"] .box::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--ink)}
+.prof:hover{background:var(--paper-2)}
+.prof[aria-checked="true"]:hover{background:var(--hl)}
+
+/* correlativities map */
+.map{position:relative;border-top:1.5px solid var(--ink);padding:22px clamp(14px,2.5vw,32px) 26px;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;background-position:-1px -1px}
+.map-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.map-head h2{font-size:1.15rem;font-weight:800;font-stretch:110%;text-transform:uppercase;letter-spacing:.04em}
+.map-head p{font-size:15px;color:var(--ink-2)}
+.cols{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(24px,4vw,64px);z-index:1}
+.col h3{font:700 13px/1.2 var(--f-head);text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);padding-bottom:8px;border-bottom:1px solid var(--ink);margin-bottom:10px}
+.col h3 span{display:block;text-transform:none;letter-spacing:0;font-weight:500;font-size:13px;margin-top:2px}
+.nodes{display:flex;flex-direction:column;gap:10px}
+.node{appearance:none;cursor:pointer;width:100%;text-align:left;background:var(--sheet);border:1.5px solid var(--ink);border-radius:6px;padding:10px 12px;min-height:48px;font:700 15px/1.2 var(--f-head);position:relative;transition:background .2s}
+.node small{display:block;font:400 13px/1.3 var(--f-read);color:var(--ink-2);margin-top:3px}
+.node:hover{background:var(--paper-2)}
+.node.on{background:var(--hl)}
+.node.dim{opacity:.45}
+.node.ave::before{content:"";position:absolute;left:-1.5px;top:-1.5px;bottom:-1.5px;width:6px;background:var(--ave);border-radius:6px 0 0 6px}
+.wires{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:visible}
+.wires path{fill:none;stroke:var(--ink-3);stroke-width:1.5}
+.wires path.req{stroke-dasharray:5 5}
+.wires path.hlw{stroke:var(--hl-deep);stroke-width:12;stroke-linecap:round;stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset .7s cubic-bezier(.16,1,.3,1)}
+.wires path.hlw.on{stroke-dashoffset:0}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font:500 13px/1.3 var(--f-head);color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{display:inline-block;width:28px;height:0;border-top:1.5px solid var(--ink-3)}
+.legend i.d{border-top-style:dashed}
+.legend i.h{height:10px;border:0;background:var(--hl)}
+.legend i.a{width:10px;height:16px;border:0;background:var(--ave);border-radius:2px}
+.pathnote{margin-top:14px;min-height:1.6em}
+
+/* catalogue */
+.cat{padding-block:clamp(48px,6vw,88px) 0}
+.cat-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;border-bottom:1.5px solid var(--ink);padding-bottom:14px}
+.cat-head h2{font-size:clamp(1.9rem,1.4rem + 1.6vw,2.8rem);font-weight:800;font-stretch:112%;line-height:1}
+.cat-head p{max-width:52ch;color:var(--ink-2)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.chip{appearance:none;cursor:pointer;border:1.5px solid var(--ink);background:transparent;border-radius:999px;min-height:44px;padding:8px 16px;font:700 15px/1 var(--f-head)}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff}
+.chip.mine[aria-pressed="true"]{background:var(--hl);color:var(--ink)}
+.group{margin-top:36px}
+.group-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.group-head h3{font-size:1.5rem;font-weight:800;font-stretch:108%}
+.group-head p{color:var(--ink-2);font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.ficha{background:var(--sheet);border:1.5px solid var(--ink);border-radius:8px;display:flex;flex-direction:column;position:relative;scroll-margin-top:90px}
+.ficha.ave{border-top:6px solid var(--ave)}
+.ficha.rec{box-shadow:0 0 0 4px var(--hl)}
+.ficha.hide{display:none}
+.f-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 18px 0}
+.mod{font:600 13px/1.35 var(--f-head);color:var(--ink-2)}
+.stamp{font:800 12px/1.1 var(--f-head);text-transform:uppercase;letter-spacing:.05em;color:var(--stamp);border:2px solid currentColor;border-radius:4px;padding:5px 7px;transform:rotate(-2.5deg);white-space:nowrap;flex:none}
+.stamp.ok{color:var(--stamp-ok)}
+.stamp.calm{color:var(--ink-2)}
+.f-body{padding:10px 18px 0;display:flex;flex-direction:column;gap:8px}
+.ficha h4{font-size:1.4rem;font-weight:800;font-stretch:106%;line-height:1.1}
+.ficha .sub{font:italic 400 16px/1.35 var(--f-read);color:var(--ink-2)}
+.ficha .desc{font-size:16px}
+.forme{font:600 1.3rem/1 var(--f-hand);color:var(--stamp);display:none}
+.ficha.rec .forme{display:block}
+.req{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:8px 0;margin-top:4px;font-size:15px}
+.req dt{font:700 13px/1.5 var(--f-head);text-transform:uppercase;letter-spacing:.04em;color:var(--ink-2)}
+.req dd{margin:0}
+.prices{width:100%;border-collapse:collapse;font:500 14px/1.3 var(--f-head);margin-top:4px}
+.prices th{text-align:left;font-weight:600;color:var(--ink-2);padding:5px 0;border-bottom:1px solid var(--rule)}
+.prices td{padding:6px 0;border-bottom:1px solid var(--rule)}
+.prices td.v{padding-left:14px;text-align:right;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.prices th.v{text-align:right;padding-left:14px}
+.prices td:first-child{font-size:13px;color:var(--ink-2);line-height:1.3}
+.pernote{font:500 13px/1.3 var(--f-head);color:var(--ink-2);margin-top:4px}
+.acts{display:flex;gap:8px;flex-wrap:wrap;padding:14px 18px 18px;margin-top:auto}
+
+/* posgrados */
+.pos-cats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.pcat{background:var(--sheet);border:1.5px solid var(--ink);border-radius:8px;padding:16px 18px 10px}
+.pcat h4{font-size:1.2rem;font-weight:800;font-stretch:106%;margin-bottom:6px}
+.prow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;padding:10px 0;border-top:1px solid var(--rule)}
+.prow:first-of-type{border-top:0}
+.prow b{font:700 16px/1.3 var(--f-head)}
+.prow p{font-size:15px;color:var(--ink-2);grid-column:1}
+.prow .when{font:600 13px/1.3 var(--f-head);color:var(--ink-2);text-align:right;white-space:nowrap}
+.prow .st{grid-column:2;justify-self:end;align-self:start}
+.tag{display:inline-block;font:700 12px/1 var(--f-head);padding:5px 8px;border-radius:999px;white-space:nowrap}
+.tag.rec{background:var(--paper-2);color:var(--ink-2)}
+.tag.now{background:var(--stamp);color:#fff}
+.tag.next{background:var(--hl);color:var(--ink)}
+.capel{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;background:var(--ink);color:#fff;border-radius:8px;padding:18px 20px;margin-bottom:18px}
+.capel h4{color:#fff;font-size:1.3rem;font-weight:800}
+.capel p{color:#D9DDF0;font-size:15px;margin-top:4px}
+.capel .btn{background:var(--hl);color:var(--ink)}
+.notice{border:1.5px dashed var(--ink);border-radius:8px;padding:14px 16px;font-size:15px;margin-bottom:18px;display:flex;gap:12px;align-items:flex-start}
+
+/* schedule */
+.sched{width:100%;border-collapse:collapse;background:var(--sheet);border:1.5px solid var(--ink);font:500 15px/1.35 var(--f-head)}
+.sched th{text-align:left;font-weight:700;padding:10px 14px;border-bottom:1.5px solid var(--ink);background:var(--paper-2)}
+.sched td{padding:9px 14px;border-top:1px solid var(--rule);vertical-align:top}
+.sched td.m{white-space:nowrap;font-weight:700}
+.sched tr.past td{color:var(--ink-3)}
+.sched tr.now td{background:var(--hl)}
+.sched-wrap{overflow-x:auto;margin-top:18px}
+
+/* closing */
+.close{margin-top:clamp(56px,7vw,96px);border-top:1.5px solid var(--ink);padding-block:36px 56px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:center}
+.close h2{font-size:clamp(1.8rem,1.3rem + 1.6vw,2.6rem);font-weight:800;font-stretch:110%;line-height:1.05}
+.close p{margin-top:10px;max-width:50ch}
+.quotes{display:flex;flex-direction:column;gap:14px}
+.quotes blockquote{margin:0;padding-left:14px;border-left:1.5px solid var(--ink);font:italic 400 16px/1.5 var(--f-read)}
+.quotes cite{display:block;font:600 13px/1.3 var(--f-head);font-style:normal;color:var(--ink-2);margin-top:4px}
+
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,16px);opacity:0;pointer-events:none;background:var(--ink);color:#fff;padding:12px 18px;border-radius:6px;font:600 15px/1.3 var(--f-head);z-index:50;transition:opacity .2s,transform .3s;max-width:calc(100vw - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:1000px){
+  .intro{grid-template-columns:minmax(0,1fr)}
+  .start{border-left:0;padding-left:0;border-top:1.5px solid var(--ink);padding-top:20px}
+  .cols{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pos-cats{grid-template-columns:minmax(0,1fr)}
+  .close{grid-template-columns:minmax(0,1fr)}
+  .tnav a.opt{display:none}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .sheet-head{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sheet-head div:nth-child(3){border-left:0}
+  .sheet-head div:nth-child(n+3){border-top:1px solid var(--rule)}
+  .cols{grid-template-columns:minmax(0,1fr);gap:22px}
+  .wires{display:none}
+  .node .after{display:block}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .tnav{display:none}
+  .brand b{font-size:17px}
+  .brand span{font-size:12px}
+  .top .wrap{gap:12px}
+  .capel{grid-template-columns:minmax(0,1fr)}
+  .prow{grid-template-columns:minmax(0,1fr)}
+  .prow .when{text-align:left}
+  .prow .st{grid-column:1;justify-self:start}
+}
+.node .after{display:none;font:600 1.15rem/1.1 var(--f-hand);color:var(--stamp);margin-top:4px}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5Z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></symbol>
+</svg>
+
+<div class="proto" role="note"><b>Prototipo para revisión.</b> Contenido, precios y fechas tomados del sitio actual y de la agenda de octubre 2026.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#plan"><b>Academia Hay un Día</b><span>Escuela de Memoria Celular · Rosario</span></a>
+    <nav class="tnav" aria-label="Secciones">
+      <a href="#plan">Plan de estudios</a>
+      <a href="#comunidades" class="opt">Comunidades</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#talleres">Talleres</a>
+      <a href="#posgrados">Posgrados</a>
+    </nav>
+    <a class="btn wa sm" href="https://wa.link/jn0zk4" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span>Escribime</span></a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="sheet" id="plan" aria-labelledby="plan-title">
+    <div class="sheet-head">
+      <div><b>Plan de estudios</b>Escuela de Memoria Celular</div>
+      <div><b>Ciclo 2026–2027</b>Inscripción todo el año</div>
+      <div><b>Modalidad</b>Online · grabado y en vivo</div>
+      <div><b>Dirección</b>Prof. Adriana M. Torres · desde 2012</div>
+    </div>
+    <div class="intro">
+      <div>
+        <h1 id="plan-title">Todo lo que podés estudiar <em>en Hay un Día</em></h1>
+        <p class="lead">De tu primer paso en el autoconocimiento a la especialización como facilitadora. Contame desde dónde arrancás y te marco el camino.</p>
+        <p class="hand sig">Adriana</p>
+      </div>
+      <div class="start">
+        <h2 id="start-title">¿Por dónde empiezo?</h2>
+        <p>Elegí lo que más se parece a tu momento.</p>
+        <div class="profiles" role="radiogroup" aria-labelledby="start-title" id="profiles">
+          <button type="button" class="prof" role="radio" aria-checked="false" data-prof="nuevo"><span class="box"></span><span>Nunca hice un curso del método<small>Quiero conocerme y sanar</small></span></button>
+          <button type="button" class="prof" role="radio" aria-checked="false" data-prof="cursando"><span class="box"></span><span>Estoy cursando el básico<small>Memoria Celular, Método Goncalves</small></span></button>
+          <button type="button" class="prof" role="radio" aria-checked="false" data-prof="facilitadora"><span class="box"></span><span>Ya soy facilitadora o terapeuta<small>Quiero especializarme y crecer</small></span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="map" aria-labelledby="map-title">
+      <div class="map-head"><h2 id="map-title">Correlatividades</h2><p>Tocá cualquier materia para ver su ficha.</p></div>
+      <div class="cols" id="cols"></div>
+      <svg class="wires" id="wires" aria-hidden="true"></svg>
+      <div class="legend" aria-hidden="true">
+        <span><i></i>Te prepara para</span>
+        <span><i class="d"></i>Requisito obligatorio</span>
+        <span><i class="h"></i>Tu camino</span>
+        <span><i class="a"></i>Comunidad Ave Mujer</span>
+      </div>
+      <p class="hand pathnote" id="pathnote" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="cat" aria-labelledby="cat-title">
+    <div class="cat-head">
+      <h2 id="cat-title">Todas las opciones</h2>
+      <p>Cada ficha tiene modalidad, requisitos, precios para Argentina y el exterior, y cómo inscribirte. Pagás desde Argentina o desde cualquier país.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filtrar opciones" id="filters">
+      <button type="button" class="chip" aria-pressed="true" data-f="todo">Todo</button>
+      <button type="button" class="chip" aria-pressed="false" data-f="comunidad">Comunidades</button>
+      <button type="button" class="chip" aria-pressed="false" data-f="curso">Cursos</button>
+      <button type="button" class="chip" aria-pressed="false" data-f="taller">Talleres</button>
+      <button type="button" class="chip" aria-pressed="false" data-f="posgrado">Posgrados</button>
+      <button type="button" class="chip mine" aria-pressed="false" data-f="mine" id="mineChip" hidden>Solo lo recomendado para mí</button>
+    </div>
+
+    <div class="group" id="comunidades" data-g="comunidad">
+      <div class="group-head"><h3>Comunidades</h3><p>Membresías mensuales con encuentros en vivo, grabaciones y acompañamiento.</p></div>
+      <div class="grid" id="g-comunidad"></div>
+    </div>
+    <div class="group" id="cursos" data-g="curso">
+      <div class="group-head"><h3>Cursos y formaciones</h3><p>En vivo, grabados y mixtos. Avanzás a tu ritmo, desde donde estés.</p></div>
+      <div class="grid" id="g-curso"></div>
+    </div>
+    <div class="group" id="talleres" data-g="taller">
+      <div class="group-head"><h3>Talleres</h3><p>Pago único y acceso de por vida. La puerta de entrada antes de un curso completo.</p></div>
+      <div class="grid" id="g-taller"></div>
+    </div>
+    <div class="group" id="posgrados" data-g="posgrado">
+      <div class="group-head"><h3>Posgrados del método</h3><p>Parte teórica grabada y clase vivencial el 4to sábado de cada mes. $45.000 ARS o US$45 por módulo.</p></div>
+      <div class="notice"><svg class="i"><use href="#i-info"/></svg><span><b>Requisito:</b> haber cursado como mínimo la mitad del Curso Básico de Memoria Celular, Método Goncalves, o ser facilitadora o facilitador ya formado. Si te perdiste un módulo, lo podés tomar grabado.</span></div>
+      <div class="capel">
+        <div><h4>Actualización de Capelinas · disponible todo el año</h4><p>Fundamental antes de cualquier posgrado. Dos videos de más de 3 horas, vademécum y un encuentro de consulta a convenir.</p></div>
+        <a class="btn sm" href="https://wa.link/jn0zk4" target="_blank" rel="noopener">Consultar</a>
+      </div>
+      <div class="pos-cats" id="g-posgrado"></div>
+      <div class="group-head" style="margin-top:36px"><h3>Plan de cursada 2026–2027</h3><p>Qué protocolo se dicta cada mes. Este mes está resaltado.</p></div>
+      <div class="sched-wrap"><table class="sched" id="sched"><caption class="sr">Cronograma de posgrados 2026 a 2027</caption><thead><tr><th scope="col">Mes</th><th scope="col">Protocolo</th><th scope="col">Seminario</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </section>
+
+  <section class="close" aria-labelledby="close-title">
+    <div>
+      <h2 id="close-title">¿Todavía no sabés por dónde empezar?</h2>
+      <p>Escribime y lo vemos juntas. Cada persona tiene su propio punto de partida, y acompaño a personas de todo el país y del exterior.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+        <a class="btn wa" href="https://wa.link/jn0zk4" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg>Escribime por WhatsApp</a>
+        <span class="btn line" style="cursor:text" title="WhatsApp">+54 9 341 6 660 795</span>
+      </div>
+      <p class="hand" style="margin-top:16px">Prof. Adriana Torres</p>
+    </div>
+    <div class="quotes">
+      <blockquote>Una infinita tristeza me direccionaba a la muerte… Llega Memoria Celular y Flores Silvestres de América y entendí que desde las células se curan.<cite>Rosalía Pauli · 43 años · Rosario</cite></blockquote>
+      <blockquote>Con sesiones de Memoria Celular descubrí cosas inimaginables y sané.<cite>Celina · alumna de Memoria Celular</cite></blockquote>
+      <blockquote>Gracias Adriana Torres por haberme formado en este maravilloso camino.<cite>RMB · terapeuta formada</cite></blockquote>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+var TODAY="2026-10";   /* fecha de referencia del prototipo: octubre 2026 */
+var WA="https://wa.link/jn0zk4", P="https://hayundia.com.ar/producto/";
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+
+/* ---------- catálogo (contenido real del sitio) ---------- */
+var ITEMS=[
+ {id:"membresia",tipo:"comunidad",ave:1,title:"Membresía Ave Mujer",sub:"Es ir a vos… es volver a vos",mod:"Mensual · encuentros en vivo y grabados",stamp:["Reabre en noviembre","calm"],
+  desc:"Un espacio para tu autoconocimiento y evolución, para honrar la energía femenina creativa que te habita, en mujeres y en varones. Clases en vivo, invitados, biblioteca, herramientas y acompañamiento.",
+  req:"Ninguno. No hace falta haber hecho cursos.",prices:[["Mensual","$15.000 ARS","USD 15"]],cta:["Pedir mi lugar",WA],prof:["nuevo","cursando"]},
+ {id:"mastermind",tipo:"comunidad",ave:1,title:"MasterMind Ave Mujer",sub:"Comunidad de facilitadores",mod:"Mensual · vivos, protocolos y asesoramiento",stamp:["Reabre en noviembre","calm"],
+  desc:"Para crecer profesional y amorosamente: protocolos en vivo, asesoramiento para tu práctica, lista de facilitadores recomendados y 10 o 20% de descuento en talleres, posgrados y retiros. Incluye la Membresía Ave Mujer.",
+  req:"Más de la mitad del básico de Memoria Celular, ser facilitadora del método, o haber cursado SIC o Flores Silvestres.",prices:[["Mensual","$25.000 ARS","USD 25"]],cta:["Pedir mi lugar",WA],prof:["cursando","facilitadora"]},
+ {id:"mc",tipo:"curso",title:"Curso de Memoria Celular",sub:"Limpieza y Reprogramación · Método Goncalves",mod:"Grabado + clases en vivo · 20 módulos",stamp:["Empezás hoy","ok"],
+  desc:"Te forma como facilitadora del método. Aprendés sanando: herramientas, recursos y protocolos para vos y tu entorno.",
+  req:"Ninguno.",table:[["Intensivo · 5 meses","$160.000","U$S 160","U$S 150"],["Mensual · 10 meses","$80.000","U$S 85","U$S 80"]],per:"por mes",cta:["Inscribirme","https://hayundia.com.ar/landing-curso-memoria-celular/"],prof:["nuevo"]},
+ {id:"sic",tipo:"curso",title:"Sanar con la Inteligencia de tus Células",sub:"Mi método de autoconocimiento · 5ª edición",mod:"En vivo · 12 encuentros mensuales + retiro",stamp:["Inicia 13/10","ok"],
+  desc:"Doce clases durante doce meses, una vez al mes, y al final el retiro Pensar con el Corazón (incluido). Grupos pequeños, cupo limitado.",
+  req:"Ninguno.",table:[["Mensual","$90.000","U$S 95","U$S 90"]],per:"por mes",cta:["Inscribirme",P+"sanar-con-la-inteligencia-de-tus-celulas/"],prof:["nuevo","facilitadora"]},
+ {id:"flores1",tipo:"curso",title:"Flores Silvestres de América · Básico",sub:"Curso de Terapeuta Floral",mod:"Grabado + consulta en vivo · 5 meses",stamp:["Inicia todos los meses","ok"],
+  desc:"El sistema floral autóctono de nuestra tierra. 8 módulos, un encuentro mensual vivencial de consulta y un test diagnóstico final. Siete grupos florales y sus fórmulas.",
+  req:"Ninguno.",table:[["Mensual","$50.000","U$S 55","U$S 50"]],per:"por mes",cta:["Inscribirme",P+"flores-silvestres-de-america-curso-basico-de-terapeuta-floral/"],prof:["nuevo"]},
+ {id:"flores2",tipo:"curso",title:"Flores Silvestres de América · Profesorado",sub:"Más de 700 elixires",mod:"Grabado + consulta en vivo · 10 meses",stamp:["Inicia todos los meses","ok"],
+  desc:"Dos clases grabadas por mes, encuentro vivencial de consulta y evaluación final. Casos, patologías y tratamientos.",
+  req:"Curso Básico de Flores Silvestres.",table:[["Mensual","$50.000","U$S 55","U$S 50"]],per:"por mes",cta:["Inscribirme",P+"flores-silvestres-de-america-curso-profesorado/"],prof:["facilitadora"]},
+ {id:"dientes",tipo:"curso",title:"Mis Dientes Dicen…",sub:"16 encuentros · 8 meses",mod:"En vivo · 1° y 3° martes, 19 a 22 hs",stamp:["Próxima cohorte a confirmar","calm"],
+  desc:"Un recorrido por la boca pieza por pieza: su significado, sus raíces y sus mensajes, con trabajo desde la Memoria Celular. Herramientas concretas para facilitadores holísticos.",
+  req:"Ninguno. Ideal para facilitadores.",table:[["Mensual","$95.000","U$S 100","U$S 95"]],per:"por mes",cta:["Avisame la fecha",WA],prof:["facilitadora"]},
+ {id:"transg",tipo:"curso",title:"Lo Transgeneracional",sub:"Seminario práctico",mod:"En vivo · 6 encuentros",stamp:["Fecha a confirmar","calm"],
+  desc:"Aprendés a interpretar tu árbol genealógico y todo lo que esconde, con protocolos para atravesar los anclajes, incluido el proyecto sentido.",
+  req:"Ninguno.",cta:["Avisame la fecha",WA],prof:["facilitadora","nuevo"]},
+ {id:"celulas",tipo:"taller",title:"Tus células hablan de ti",sub:"Taller introductorio",mod:"Grabado",stamp:["Gratis","ok"],
+  desc:"Conectate con tus células y conocé las herramientas del Método Goncalves. La introducción al Curso de Memoria Celular.",
+  req:"Ninguno.",prices:[["Acceso","Gratis",""]],cta:["Ver el taller","https://youtu.be/O9CG0FcPNYw"],prof:["nuevo"]},
+ {id:"femenino",tipo:"taller",title:"Habito mi Femenino para Crear",sub:"Taller en vivo por Zoom",mod:"En vivo · viernes 16 de octubre",stamp:["16/10","stamp"],
+  desc:"Un taller para habitar tu energía femenina creativa. Gratuito para miembros de la Membresía y el MasterMind.",
+  req:"Ninguno.",prices:[["Entrada","$30.000 ARS",""]],cta:["Inscribirme",P+"habito-mi-femenino-para-crear-taller-16-10/"],prof:["nuevo","cursando","facilitadora"]},
+ {id:"intestino",tipo:"taller",title:"Intestino, 2do cerebro",sub:"El intestino y tus emociones",mod:"Grabado · 2 horas",stamp:["Acceso de por vida","calm"],
+  desc:"El 90% de tu serotonina se produce en el intestino. Cómo lo afectan las emociones y herramientas simples desde la Memoria Celular.",
+  req:"Ninguno.",prices:[["Pago único","$30.000 ARS","U$S 33 / 30"]],cta:["Comprar",WA],prof:["nuevo"]},
+ {id:"riqueza",tipo:"taller",title:"La riqueza está en ti",sub:"Tu relación con el dinero",mod:"Grabado · 2 h 30 min",stamp:["Acceso de por vida","calm"],
+  desc:"Para conectarte con la riqueza y empezar a generarla. Herramientas para cambiar la mirada y acceder a ella.",
+  req:"Ninguno.",prices:[["Pago único","$20.000 ARS","U$S 22 / 20"]],cta:["Comprar",WA],preview:"https://youtu.be/5-8twQX7ilc",prof:["nuevo"]},
+ {id:"prosperidad",tipo:"taller",title:"La prosperidad está en ti",sub:"Abundancia desde tus células",mod:"Grabado · 3 horas",stamp:["Acceso de por vida","calm"],
+  desc:"Cómo crear prosperidad y abundancia en tu vida, con herramientas de Memoria Celular para empezar a crear.",
+  req:"Ninguno.",prices:[["Pago único","$30.000 ARS","U$S 33 / 30"]],cta:["Comprar",WA],preview:"https://youtu.be/omLfJoXJXOA",prof:["nuevo"]},
+ {id:"creatividad",tipo:"taller",title:"Creatividad en acción",sub:"Tus proyectos en marcha",mod:"Grabado · 4 horas",stamp:["Acceso de por vida","calm"],
+  desc:"Cambia cómo te relacionás con la creatividad y con la puesta en marcha de tus proyectos. Propuestas simples y concretas.",
+  req:"Ninguno.",prices:[["Pago único","$50.000 ARS","U$S 55 / 50"]],cta:["Comprar",WA],preview:"https://youtu.be/M6u2WlLw8c8",prof:["nuevo"]},
+ {id:"dinero",tipo:"taller",title:"Dinero & Logros",sub:"Materializar lo que querés",mod:"Grabado · 2 horas",stamp:["Acceso de por vida","calm"],
+  desc:"Revisá cómo tenés codificado el dinero y la concreción de logros en tu memoria celular, con recursos para materializarlos.",
+  req:"Ninguno.",prices:[["Pago único","$30.000 ARS","U$S 33 / 30"]],cta:["Comprar",WA],preview:"https://youtube.com/live/lq7Ph_08NZA",prof:["nuevo"]},
+ {id:"miedo",tipo:"taller",title:"Si no tuvieras miedo…",sub:"¿Qué harías?",mod:"Grabado",stamp:["Acceso de por vida","calm"],
+  desc:"Descubrí tu biografía inconsciente, conocé tus ciclos y herramientas para el logro de tus objetivos desde tu memoria celular.",
+  req:"Ninguno.",prices:[["Pago único","Consultá el precio",""]],cta:["Ver el taller","https://hayundia.com.ar/curso-si-no-tuvieras-miedo/"],prof:["nuevo"]}
+];
+/* posgrados: categorías y protocolos de la escuela, con su mes (AAAA-MM) */
+var POS=[
+ {cat:"Protocolos para sanar órganos y funciones",rows:[
+  ["Seminario de Memoria de los Órganos (6 módulos)","Lo oculto en la memoria de cada órgano, glándulas, músculos y piel. Este mes: 2° módulo, boca y dientes, sáb 17/10 de 11:30 a 13:30 hs.",["2026-08","2027-01"],P+"seminario-de-organos-y-funciones-metodo-goncalves/"],
+  ["Trabajo del Pericardio","Amortigua los golpes internos y externos; descargarlo trae una nueva vida.",["2026-08"]],
+  ["El Hígado Cuenta su Historia (2 encuentros)","Muy efectivo en trastornos hepáticos, con una herramienta para el hogar.",["2026-05","2026-06"]],
+  ["Alergias","Elimina de raíz la causa emocional de la alergia.",["2026-03"]],
+  ["Seminario de Obesidad (5 módulos)","Medidas y talla, componentes heredados, cerebro profundo, epitafio y estrategias.",["2026-03","2026-07"]],
+  ["Memoria Intestinal","Limpieza colónica: el origen de un trastorno en el órgano.",["2027-07"]]]},
+ {cat:"Protocolos caballitos de batalla",rows:[
+  ["Archivos Lumínicos en el Cerebro","Rojo, amarillo y verde: temas muy profundos sin comprometer al consultante. Sáb 17/10 de 9 a 11 hs.",["2026-10"]],
+  ["¿Quién soy yo para él, ella, eso o aquello?","Traumas atrapados en el cuerpo físico.",["2026-09"],P+"quien-soy-yo-para-el-ella-eso-o-aquello/"],
+  ["Trabajando la Multiplicidad de Yoes (2 encuentros)","Personalidades múltiples, bipolaridad y situaciones difíciles.",["2026-11","2026-12"]]]},
+ {cat:"Protocolos y trabajos muy útiles",rows:[
+  ["La Rayuela","Para destrabar anclajes obturadores de la memoria celular.",["2026-02"]],
+  ["La Sombra","Lo más oculto de los ancestros que nos impide avanzar. No es del método.",["2026-02"]],
+  ["Sanación a Distancia, Emergencia y Micromasajes II","Técnicas de sanación a distancia y de emergencia, nuevos micromasajes.",["2026-04"]],
+  ["Toma Tu Vida","Sacar las cargas para hacerse cargo de la propia vida.",["2026-07"]],
+  ["Feng Shui Neurológico","Armonización de la casa desde una mirada neurológica.",["2027-04"]],
+  ["La Novela de mi Vida","La novela que vivimos inconscientemente y sus consecuencias.",["2027-05"]],
+  ["Los Relojes del Inconsciente","Para sanar problemas repetitivos.",["2027-05"]]]},
+ {cat:"Protocolos de dinero y logros",rows:[
+  ["Dos Baldosones","Para borrar impedimentos con el dinero.",["2027-01"]],
+  ["Plataforma del Dinero (2 encuentros)","Cambiar la plataforma mental y emocional que trae insatisfacción.",["2027-02","2027-03"]],
+  ["Barra Dorada (2 encuentros)","Planificar logros, emprendimientos, conseguir vivienda.",["2027-02"]],
+  ["En Busca del Objetivo","Con el laberinto de hemisferios cerebrales tallado.",["2027-03"]],
+  ["Acercando el Objetivo","Blanco, rojo, amarillo y verde. Ideal para logros.",["2027-04"]]]},
+ {cat:"Protocolos de parejas",rows:[
+  ["Los Cambios Necesarios para la Relación de Pareja","Conflictos de parejas consolidadas o ancestrales que resuenan hoy.",["2027-06"]],
+  ["Los 7 Estadíos","El camino a la pareja ideal; también para embarazos o proyectos.",["2027-07"]]]}
+];
+var SCHED=[["2026-02","La Rayuela · La Sombra",""],["2026-03","Alergias","Obesidad · módulo 1"],["2026-04","Sanación a Distancia y Emergencia","Obesidad · módulo 2"],["2026-05","El Hígado · parte 1","Obesidad · módulo 3"],["2026-06","El Hígado · parte 2","Obesidad · módulo 4"],["2026-07","Toma Tu Vida","Obesidad · módulo 5"],["2026-08","Trabajo del Pericardio","Memoria de Órganos · módulo 1"],["2026-09","¿Quién soy yo…?","Memoria de Órganos · módulo 1"],["2026-10","Archivos Lumínicos · sáb 17/10","Memoria de Órganos · módulo 2 · sáb 17/10"],["2026-11","Multiplicidad de Yoes · parte 1","Memoria de Órganos · módulo 3"],["2026-12","Multiplicidad de Yoes · parte 2","Memoria de Órganos · módulo 4"],["2027-01","Dos Baldosones","Memoria de Órganos · módulo 5"],["2027-02","Barra Dorada","Plataforma del Dinero · parte 1"],["2027-03","En Busca del Objetivo","Plataforma del Dinero · parte 2"],["2027-04","Feng Shui Neurológico","Acercando el Objetivo"],["2027-05","La Novela de mi Vida","Los Relojes del Inconsciente"],["2027-06","Cambios en la Pareja","La Sombra del Cuerpo Emocional"],["2027-07","Los 7 Estadíos de la Pareja","Memoria Intestinal"]];
+var MO=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+function mlabel(m){var p=m.split("-");return MO[+p[1]-1].charAt(0).toUpperCase()+MO[+p[1]-1].slice(1)+" "+p[0];}
+
+/* ---------- mapa de correlatividades ---------- */
+var COLS=[
+ {t:"Primeros pasos",s:"Sin requisitos",n:[["celulas","Tus células hablan de ti","Taller gratuito"],["talleres","Talleres grabados","Pago único"],["sic","Sanar con la Inteligencia de tus Células","Mi método · 12 meses"],["flores1","Flores Silvestres · Básico","5 meses"],["membresia","Membresía Ave Mujer","Comunidad",1]]},
+ {t:"Formación",s:"Para formarte",n:[["mc","Curso de Memoria Celular","Te forma como facilitadora"],["flores2","Flores Silvestres · Profesorado","10 meses"],["dientes","Mis Dientes Dicen…","Para facilitadores"],["transg","Lo Transgeneracional","Seminario"]]},
+ {t:"Especialización",s:"Desde la mitad del básico",n:[["capelinas","Actualización de Capelinas","Todo el año"],["posgrados","Posgrados del método","Un protocolo por mes"]]},
+ {t:"Comunidad profesional",s:"Para facilitadoras",n:[["mastermind","MasterMind Ave Mujer","Requisito: mitad del básico, SIC o Flores Silvestres",1]]}
+];
+var EDGES=[["celulas","mc"],["talleres","mc"],["mc","capelinas",1],["mc","posgrados",1],["capelinas","posgrados"],["flores1","flores2",1]];
+var AFTER={celulas:"después: Curso de Memoria Celular",talleres:"después: Curso de Memoria Celular",mc:"después: posgrados y MasterMind",flores1:"después: Profesorado y MasterMind",sic:"después: MasterMind",capelinas:"antes de cada posgrado"};
+var PROFILES={
+ nuevo:{nodes:["celulas","talleres","sic","flores1","membresia","mc"],edges:["celulas>mc","talleres>mc"],note:"Empezá por el taller gratuito “Tus células hablan de ti”. Cuando quieras ir más profundo, el Curso de Memoria Celular te forma."},
+ cursando:{nodes:["mc","capelinas","posgrados","mastermind","membresia"],edges:["mc>capelinas","mc>posgrados","capelinas>posgrados"],note:"Al llegar a la mitad del básico ya podés sumarte a los posgrados y al MasterMind. Empezá por Capelinas."},
+ facilitadora:{nodes:["capelinas","posgrados","mastermind","flores2","dientes","transg"],edges:["capelinas>posgrados"],note:"Seguí especializándote con un protocolo por mes, y sumate al MasterMind para crecer con tu práctica."}
+};
+var NODEMAP={talleres:"talleres",posgrados:"posgrados",capelinas:"posgrados"};
+
+function renderMap(){
+  document.getElementById("cols").innerHTML=COLS.map(function(c){
+    return '<div class="col"><h3>'+esc(c.t)+'<span>'+esc(c.s)+'</span></h3><div class="nodes">'+c.n.map(function(n){
+      return '<button type="button" class="node'+(n[3]?" ave":"")+'" data-node="'+n[0]+'">'+esc(n[1])+'<small>'+esc(n[2])+'</small>'+(AFTER[n[0]]?'<span class="after">'+esc(AFTER[n[0]])+'</span>':"")+'</button>';
+    }).join("")+'</div></div>';
+  }).join("");
+}
+function drawWires(){
+  var svg=document.getElementById("wires"),map=svg.parentNode,mr=map.getBoundingClientRect();
+  if(getComputedStyle(svg).display==="none")return;
+  svg.setAttribute("viewBox","0 0 "+mr.width+" "+mr.height);svg.setAttribute("width",mr.width);svg.setAttribute("height",mr.height);
+  var base="",hl="";
+  EDGES.forEach(function(e){
+    var a=map.querySelector('[data-node="'+e[0]+'"]'),b=map.querySelector('[data-node="'+e[1]+'"]');if(!a||!b)return;
+    var ra=a.getBoundingClientRect(),rb=b.getBoundingClientRect(),d;
+    if(Math.abs(ra.left-rb.left)<10){ /* same column: vertical link on the right edge */
+      var x=ra.right-mr.left,y1=ra.bottom-mr.top,y2=rb.top-mr.top;d="M"+(x-16)+" "+y1+" L"+(x-16)+" "+y2;
+    }else{
+      var x1=ra.right-mr.left,y1b=ra.top+ra.height/2-mr.top,x2=rb.left-mr.left,y2b=rb.top+rb.height/2-mr.top,cx=(x1+x2)/2;
+      d="M"+x1+" "+y1b+" C"+cx+" "+y1b+","+cx+" "+y2b+","+x2+" "+y2b;
+    }
+    var key=e[0]+">"+e[1];
+    hl+='<path class="hlw" data-edge="'+key+'" d="'+d+'"/>';
+    base+='<path class="'+(e[2]?"req":"")+'" d="'+d+'"/>';
+  });
+  svg.innerHTML=hl+base;
+  svg.querySelectorAll(".hlw").forEach(function(p){var L=Math.ceil(p.getTotalLength());p.style.setProperty("--len",L);});
+  applyProfile(false);
+}
+
+/* ---------- catálogo ---------- */
+function ficha(it){
+  var price="";
+  if(it.table){
+    price='<table class="prices"><thead><tr><th scope="col">Modalidad</th><th scope="col" class="v">Argentina</th><th scope="col" class="v">PayPal</th><th scope="col" class="v">AstroPay</th></tr></thead><tbody>'+
+      it.table.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td class="v">'+esc(r[1])+'</td><td class="v">'+esc(r[2])+'</td><td class="v">'+esc(r[3])+'</td></tr>';}).join("")+'</tbody></table>'+(it.per?'<p class="pernote">Valores '+esc(it.per)+'. PayPal y AstroPay / Prex en dólares, para pagar desde el exterior.</p>':"");
+  }else if(it.prices){
+    price='<table class="prices"><tbody>'+it.prices.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td class="v">'+esc(r[1])+'</td>'+(r[2]?'<td class="v">'+esc(r[2])+'</td>':"<td></td>")+'</tr>';}).join("")+'</tbody></table>';
+  }
+  var ctaCls=it.cta[1]===WA?"btn wa sm":"btn ink sm";
+  return '<article class="ficha'+(it.ave?" ave":"")+'" id="c-'+it.id+'" data-tipo="'+it.tipo+'" data-prof="'+it.prof.join(" ")+'">'+
+    '<div class="f-top"><span class="mod">'+esc(it.mod)+'</span><span class="stamp '+(it.stamp[1]||"")+'">'+esc(it.stamp[0])+'</span></div>'+
+    '<div class="f-body"><span class="forme">recomendado para vos</span><h4>'+esc(it.title)+'</h4><p class="sub">'+esc(it.sub)+'</p><p class="desc">'+esc(it.desc)+'</p>'+
+    '<dl class="req"><dt>Requisito</dt><dd>'+esc(it.req)+'</dd></dl>'+price+'</div>'+
+    '<div class="acts"><a class="'+ctaCls+'" href="'+it.cta[1]+'" target="_blank" rel="noopener">'+(it.cta[1]===WA?'<svg class="i"><use href="#i-wa"/></svg>':"")+esc(it.cta[0])+(it.cta[1]===WA?"":'<svg class="i"><use href="#i-arrow"/></svg>')+'</a>'+
+    (it.preview?'<a class="btn line sm" href="'+it.preview+'" target="_blank" rel="noopener"><svg class="i"><use href="#i-play"/></svg>Ver preview</a>':"")+'</div></article>';
+}
+function status(months){
+  var first=months[0],last=months[months.length-1];
+  if(first<=TODAY&&TODAY<=last)return '<span class="tag now">Este mes</span>';
+  if(last<TODAY)return '<span class="tag rec">Grabado disponible</span>';
+  return '<span class="tag next">Próximo · '+mlabel(first)+'</span>';
+}
+function renderCatalog(){
+  ["comunidad","curso","taller"].forEach(function(t){
+    document.getElementById("g-"+t).innerHTML=ITEMS.filter(function(i){return i.tipo===t;}).map(ficha).join("");
+  });
+  document.getElementById("g-posgrado").innerHTML=POS.map(function(c){
+    return '<article class="pcat" data-prof="cursando facilitadora"><h4>'+esc(c.cat)+'</h4>'+c.rows.map(function(r){
+      var when=r[2].length>1?mlabel(r[2][0])+" – "+mlabel(r[2][r[2].length-1]):mlabel(r[2][0]);
+      return '<div class="prow"><b>'+esc(r[0])+'</b><span class="when">'+when+'</span><p>'+esc(r[1])+(r[3]?' <a href="'+r[3]+'" target="_blank" rel="noopener">Inscribirme</a>':"")+'</p><span class="st">'+status(r[2])+'</span></div>';
+    }).join("")+'</article>';
+  }).join("");
+  document.querySelector("#sched tbody").innerHTML=SCHED.map(function(r){
+    var cls=r[0]<TODAY?"past":r[0]===TODAY?"now":"";
+    return '<tr class="'+cls+'"><td class="m num">'+mlabel(r[0])+(cls==="now"?" · este mes":"")+'</td><td>'+esc(r[1])+'</td><td>'+esc(r[2])+'</td></tr>';
+  }).join("");
+}
+
+/* ---------- perfil + filtros ---------- */
+var S={prof:null,f:"todo"};
+function applyProfile(animate){
+  var p=S.prof?PROFILES[S.prof]:null;
+  document.querySelectorAll(".node").forEach(function(n){
+    var on=p&&p.nodes.indexOf(n.getAttribute("data-node"))>=0;n.classList.toggle("on",!!on);n.classList.toggle("dim",!!p&&!on);
+  });
+  document.querySelectorAll(".hlw").forEach(function(e){e.classList.toggle("on",!!p&&p.edges.indexOf(e.getAttribute("data-edge"))>=0);});
+  document.getElementById("pathnote").textContent=p?p.note:"";
+  document.querySelectorAll(".ficha,.pcat").forEach(function(f){
+    var rec=!!S.prof&&(f.getAttribute("data-prof")||"").split(" ").indexOf(S.prof)>=0;
+    f.classList.toggle("rec",rec&&f.classList.contains("ficha"));
+  });
+  document.getElementById("mineChip").hidden=!S.prof;
+  applyFilter();
+}
+function applyFilter(){
+  document.querySelectorAll(".group").forEach(function(g){
+    var t=g.getAttribute("data-g"),show=S.f==="todo"||S.f==="mine"||S.f===t;
+    g.hidden=!show;
+  });
+  document.querySelectorAll(".ficha").forEach(function(f){
+    var hide=S.f==="mine"&&!f.classList.contains("rec");f.classList.toggle("hide",hide);
+  });
+  document.querySelectorAll(".group").forEach(function(g){
+    if(S.f==="mine"&&g.getAttribute("data-g")!=="posgrado"){g.hidden=!g.querySelector(".ficha:not(.hide)");}
+    if(S.f==="mine"&&g.getAttribute("data-g")==="posgrado"){g.hidden=["cursando","facilitadora"].indexOf(S.prof)<0;}
+  });
+  document.querySelectorAll(".chip").forEach(function(c){c.setAttribute("aria-pressed",String(c.getAttribute("data-f")===S.f));});
+}
+document.getElementById("profiles").addEventListener("click",function(e){
+  var b=e.target.closest(".prof");if(!b)return;
+  var v=b.getAttribute("data-prof");S.prof=S.prof===v?null:v;
+  document.querySelectorAll(".prof").forEach(function(x){x.setAttribute("aria-checked",String(x.getAttribute("data-prof")===S.prof));});
+  if(!S.prof&&S.f==="mine")S.f="todo";
+  applyProfile(true);
+});
+document.getElementById("profiles").addEventListener("keydown",function(e){
+  if(["ArrowDown","ArrowUp","ArrowRight","ArrowLeft"].indexOf(e.key)<0)return;e.preventDefault();
+  var bs=[].slice.call(document.querySelectorAll(".prof")),i=bs.indexOf(document.activeElement),n=bs[(i+(e.key==="ArrowDown"||e.key==="ArrowRight"?1:bs.length-1))%bs.length];n.focus();n.click();
+});
+document.getElementById("filters").addEventListener("click",function(e){var c=e.target.closest(".chip");if(!c)return;S.f=c.getAttribute("data-f");applyFilter();});
+document.getElementById("cols").addEventListener("click",function(e){
+  var n=e.target.closest(".node");if(!n)return;var id=n.getAttribute("data-node");
+  var tgt=NODEMAP[id]?document.getElementById(NODEMAP[id]):document.getElementById("c-"+id);
+  if(S.f!=="todo"){S.f="todo";applyFilter();}
+  if(tgt){tgt.scrollIntoView({behavior:"smooth",block:"start"});}
+});
+
+renderMap();renderCatalog();
+requestAnimationFrame(drawWires);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(drawWires);
+var rt;window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(drawWires,120);});
+})();
+</script>

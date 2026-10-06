@@ -1,3 +1,4 @@
 .impeccable/live/server.json
 .impeccable/config.local.json
 .impeccable/review/_wrapped.html
+.impeccable/review/*/_wrapped.html
