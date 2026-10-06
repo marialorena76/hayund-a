@@ -1,215 +1,295 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-06T22:49:09+00:00",
+  "generatedAt": "2026-10-06T22:53:27+00:00",
   "title": "Design System: Academia Hay un Día · Plan de estudios",
   "extensions": {
     "colorMeta": {
-      "paper": {
+      "bg": {
         "role": "neutral",
-        "displayName": "Paper",
-        "canonical": "#F2F3EC",
-        "oklch": "oklch(96.1% 0.009 113.2)",
+        "displayName": "Mist Ground",
+        "canonical": "#F2F9FB",
+        "oklch": "oklch(97.7% 0.008 216.6)",
         "tonalRamp": [
-          "#11120D",
-          "#2B2C27",
-          "#474843",
-          "#666761",
-          "#868780",
-          "#A7A8A2",
-          "#CACBC4",
-          "#EEEFE8"
+          "#0E1214",
+          "#272C2E",
+          "#43494A",
+          "#616769",
+          "#818789",
+          "#A2A9AB",
+          "#C5CCCE",
+          "#E9F0F2"
         ]
       },
-      "paper-2": {
+      "bg-2": {
         "role": "neutral",
-        "displayName": "Paper Fold",
-        "canonical": "#E7E9DE",
-        "oklch": "oklch(92.9% 0.015 115.0)",
+        "displayName": "Mist 2",
+        "canonical": "#E4F3F7",
+        "oklch": "oklch(95.4% 0.017 215.5)",
         "tonalRamp": [
-          "#11120B",
-          "#2B2C24",
-          "#474940",
-          "#66675E",
-          "#86877D",
-          "#A7A99F",
-          "#CACCC1",
-          "#EEF0E5"
+          "#091416",
+          "#222E31",
+          "#3E4A4D",
+          "#5C696C",
+          "#7B898D",
+          "#9CABAE",
+          "#BFCED1",
+          "#E3F2F6"
         ]
       },
-      "sheet": {
+      "surface": {
         "role": "neutral",
-        "displayName": "Sheet",
-        "canonical": "#FCFCF7",
-        "oklch": "oklch(99.0% 0.007 106.5)",
+        "displayName": "White",
+        "canonical": "#FFFFFF",
+        "oklch": "oklch(100.0% 0.000 89.9)",
         "tonalRamp": [
-          "#12120E",
-          "#2C2C28",
-          "#484844",
-          "#666662",
-          "#868682",
-          "#A8A8A3",
-          "#CBCBC6",
-          "#EFEFEA"
+          "#121212",
+          "#2B2B2B",
+          "#484848",
+          "#666666",
+          "#868686",
+          "#A8A8A8",
+          "#CACACA",
+          "#EEEEEE"
         ]
       },
       "ink": {
-        "role": "primary",
-        "displayName": "Plan Ink",
-        "canonical": "#1F2A5C",
-        "oklch": "oklch(30.6% 0.090 270.9)",
+        "role": "neutral",
+        "displayName": "Navy Ink",
+        "canonical": "#1A3A4C",
+        "oklch": "oklch(33.3% 0.049 235.5)",
         "tonalRamp": [
-          "#060838",
-          "#1B2657",
-          "#364478",
-          "#53639A",
-          "#7283BD",
-          "#92A5E1",
-          "#B8C9FD",
-          "#E9EEFE"
-        ]
-      },
-      "ink-hover": {
-        "role": "primary",
-        "displayName": "Pressed Ink",
-        "canonical": "#2D3A78",
-        "oklch": "oklch(37.3% 0.106 271.4)",
-        "tonalRamp": [
-          "#07033F",
-          "#1A235F",
-          "#344280",
-          "#5061A3",
-          "#6F82C6",
-          "#8FA4EB",
-          "#B8C8FD",
-          "#E9EEFE"
+          "#001420",
+          "#0E2F40",
+          "#2C4C5F",
+          "#4A6B7F",
+          "#698BA0",
+          "#8AADC3",
+          "#ACD0E7",
+          "#DEF2FF"
         ]
       },
       "ink-2": {
         "role": "neutral",
-        "displayName": "Ink 2",
-        "canonical": "#4A5380",
-        "oklch": "oklch(45.5% 0.074 274.4)",
+        "displayName": "Slate Ink",
+        "canonical": "#4F6F80",
+        "oklch": "oklch(52.4% 0.046 231.9)",
         "tonalRamp": [
-          "#0A0B31",
-          "#212750",
-          "#3C4470",
-          "#596391",
-          "#7883B3",
-          "#99A5D7",
-          "#BBC8FC",
-          "#E9EEFF"
+          "#01141E",
+          "#102F3E",
+          "#2D4C5C",
+          "#4B6B7C",
+          "#6B8C9D",
+          "#8CADC0",
+          "#AED0E4",
+          "#DDF2FE"
         ]
       },
-      "ink-3": {
+      "line": {
         "role": "neutral",
-        "displayName": "Ink 3 (lines only)",
-        "canonical": "#6E7697",
-        "oklch": "oklch(57.2% 0.052 274.0)",
+        "displayName": "Hairline",
+        "canonical": "#D3E9EF",
+        "oklch": "oklch(92.0% 0.025 215.9)",
         "tonalRamp": [
-          "#0B0F28",
-          "#232945",
-          "#3F4664",
-          "#5D6484",
-          "#7C84A6",
-          "#9DA6C9",
-          "#C0C9ED",
-          "#E9EEFE"
+          "#041419",
+          "#1D2F33",
+          "#394B50",
+          "#576A6F",
+          "#768A90",
+          "#97ACB2",
+          "#B9CFD5",
+          "#DDF3F9"
         ]
       },
-      "rule": {
-        "role": "neutral",
-        "displayName": "Rule",
-        "canonical": "#CBD0DC",
-        "oklch": "oklch(85.7% 0.017 267.8)",
+      "tq": {
+        "role": "primary",
+        "displayName": "Bright Turquoise",
+        "canonical": "#48C9D4",
+        "oklch": "oklch(77.0% 0.111 203.2)",
         "tonalRamp": [
-          "#0E1119",
-          "#272B34",
-          "#434851",
-          "#626670",
-          "#818691",
-          "#A3A8B3",
-          "#C5CAD6",
-          "#E9EEFB"
+          "#011517",
+          "#013236",
+          "#025258",
+          "#00747C",
+          "#1398A2",
+          "#37BCC7",
+          "#63E0EB",
+          "#C6FAFE"
         ]
       },
-      "grid": {
-        "role": "neutral",
-        "displayName": "Graph Grid",
-        "canonical": "#E0E3EA",
-        "oklch": "oklch(91.6% 0.010 267.4)",
+      "tq-2": {
+        "role": "primary",
+        "displayName": "Turquoise",
+        "canonical": "#3C9FBF",
+        "oklch": "oklch(65.8% 0.102 223.2)",
         "tonalRamp": [
-          "#101216",
-          "#292B30",
-          "#45484D",
-          "#63666C",
-          "#83868C",
-          "#A5A8AE",
-          "#C7CAD1",
-          "#EBEEF5"
+          "#01141C",
+          "#03313E",
+          "#055064",
+          "#07718D",
+          "#2D93B3",
+          "#55B6D6",
+          "#7AD9FB",
+          "#D9F4FE"
         ]
       },
-      "highlighter": {
+      "tq-3": {
+        "role": "primary",
+        "displayName": "Deep Turquoise",
+        "canonical": "#2A6F96",
+        "oklch": "oklch(51.6% 0.092 237.3)",
+        "tonalRamp": [
+          "#001421",
+          "#032F46",
+          "#074D6F",
+          "#286D94",
+          "#4B8EB7",
+          "#6DB0DB",
+          "#95D3FB",
+          "#DFF2FE"
+        ]
+      },
+      "tq-deep": {
+        "role": "primary",
+        "displayName": "Night Turquoise",
+        "canonical": "#1F5A7A",
+        "oklch": "oklch(44.5% 0.080 236.4)",
+        "tonalRamp": [
+          "#011420",
+          "#012F46",
+          "#0F4D6D",
+          "#336D8E",
+          "#548EB0",
+          "#76B0D3",
+          "#98D3F8",
+          "#DEF2FF"
+        ]
+      },
+      "tq-wash": {
         "role": "secondary",
-        "displayName": "Highlighter",
-        "canonical": "#E9F36A",
-        "oklch": "oklch(93.0% 0.160 112.9)",
+        "displayName": "Turquoise Wash",
+        "canonical": "#DDF3F6",
+        "oklch": "oklch(94.9% 0.023 206.6)",
         "tonalRamp": [
-          "#121300",
-          "#2C2E01",
-          "#484C00",
-          "#676C14",
-          "#878E0C",
-          "#A9B110",
-          "#CCD549",
-          "#EFFA71"
+          "#041517",
+          "#1D2F31",
+          "#394B4E",
+          "#576A6D",
+          "#768A8D",
+          "#97ACAF",
+          "#BACFD2",
+          "#DDF3F6"
         ]
       },
-      "highlighter-deep": {
+      "path": {
         "role": "secondary",
-        "displayName": "Highlighter Stroke",
-        "canonical": "#D3E03A",
-        "oklch": "oklch(86.9% 0.178 114.1)",
+        "displayName": "Path",
+        "canonical": "#BFECF1",
+        "oklch": "oklch(91.3% 0.047 204.7)",
         "tonalRamp": [
-          "#111300",
-          "#2B2E04",
-          "#474C0A",
-          "#666C11",
-          "#868F02",
-          "#A7B200",
-          "#CAD62B",
-          "#EDFB5C"
+          "#001518",
+          "#043236",
+          "#264F54",
+          "#456E73",
+          "#648F93",
+          "#85B1B6",
+          "#A8D4D9",
+          "#CBF8FD"
         ]
       },
-      "stamp": {
+      "rose": {
         "role": "tertiary",
-        "displayName": "Stamp Red",
-        "canonical": "#B0284A",
-        "oklch": "oklch(50.5% 0.172 11.9)",
+        "displayName": "Rose",
+        "canonical": "#A2446A",
+        "oklch": "oklch(56.3% 0.134 0.1)",
         "tonalRamp": [
-          "#280109",
-          "#56021C",
-          "#870330",
-          "#B22A4B",
-          "#D8506A",
-          "#FA798D",
-          "#FEB3BB",
-          "#FFE8EA"
+          "#270110",
+          "#530329",
+          "#7C1D45",
+          "#A03F63",
+          "#C56083",
+          "#EB82A4",
+          "#FBB3C8",
+          "#FEE8EE"
         ]
       },
-      "stamp-ok": {
+      "rose-wash": {
         "role": "tertiary",
-        "displayName": "Stamp Green",
-        "canonical": "#1F6B4A",
-        "oklch": "oklch(47.2% 0.091 160.6)",
+        "displayName": "Rose Wash",
+        "canonical": "#FBE6EC",
+        "oklch": "oklch(94.3% 0.024 358.3)",
         "tonalRamp": [
-          "#00170C",
-          "#063421",
-          "#0C5538",
-          "#2C7654",
-          "#4F9774",
-          "#71BA95",
-          "#94DDB7",
-          "#C5FEDF"
+          "#1A0D11",
+          "#36262B",
+          "#534247",
+          "#726166",
+          "#938086",
+          "#B5A2A7",
+          "#D9C4CA",
+          "#FDE8EE"
+        ]
+      },
+      "lav": {
+        "role": "tertiary",
+        "displayName": "Lavender",
+        "canonical": "#5D5292",
+        "oklch": "oklch(47.9% 0.101 289.9)",
+        "tonalRamp": [
+          "#15003A",
+          "#2C1E59",
+          "#483C7A",
+          "#665B9C",
+          "#857BBF",
+          "#A69DE3",
+          "#C9C2FB",
+          "#EEECFE"
+        ]
+      },
+      "lav-wash": {
+        "role": "tertiary",
+        "displayName": "Lavender Wash",
+        "canonical": "#ECE9F7",
+        "oklch": "oklch(94.0% 0.019 295.9)",
+        "tonalRamp": [
+          "#121019",
+          "#2C2A34",
+          "#484651",
+          "#676470",
+          "#878491",
+          "#A8A5B3",
+          "#CBC8D6",
+          "#EFECFA"
+        ]
+      },
+      "sage": {
+        "role": "tertiary",
+        "displayName": "Sage",
+        "canonical": "#2F6E5E",
+        "oklch": "oklch(49.2% 0.070 174.2)",
+        "tonalRamp": [
+          "#011610",
+          "#013429",
+          "#0F5445",
+          "#357363",
+          "#569483",
+          "#78B7A4",
+          "#9ADAC7",
+          "#BEFFEB"
+        ]
+      },
+      "sage-wash": {
+        "role": "tertiary",
+        "displayName": "Sage Wash",
+        "canonical": "#E1F2EC",
+        "oklch": "oklch(94.7% 0.020 172.8)",
+        "tonalRamp": [
+          "#081411",
+          "#212F2A",
+          "#3D4B47",
+          "#5B6A65",
+          "#7B8A85",
+          "#9CACA6",
+          "#BECFC9",
+          "#E2F3ED"
         ]
       },
       "ave": {
@@ -228,6 +308,22 @@
           "#FEE9E3"
         ]
       },
+      "ave-wash": {
+        "role": "tertiary",
+        "displayName": "Ave Wash",
+        "canonical": "#FDEEE7",
+        "oklch": "oklch(95.9% 0.019 46.8)",
+        "tonalRamp": [
+          "#190F0A",
+          "#342923",
+          "#51453F",
+          "#70635D",
+          "#90837D",
+          "#B2A49E",
+          "#D6C7C0",
+          "#FAEBE4"
+        ]
+      },
       "whatsapp": {
         "role": "tertiary",
         "displayName": "WhatsApp Green",
@@ -243,38 +339,6 @@
           "#87E2A8",
           "#C8FED9"
         ]
-      },
-      "on-ink": {
-        "role": "neutral",
-        "displayName": "On Ink",
-        "canonical": "#FFFFFF",
-        "oklch": "oklch(100.0% 0.000 89.9)",
-        "tonalRamp": [
-          "#121212",
-          "#2B2B2B",
-          "#484848",
-          "#666666",
-          "#868686",
-          "#A8A8A8",
-          "#CACACA",
-          "#EEEEEE"
-        ]
-      },
-      "on-ink-soft": {
-        "role": "neutral",
-        "displayName": "On Ink Soft",
-        "canonical": "#D9DDF0",
-        "oklch": "oklch(90.0% 0.026 276.4)",
-        "tonalRamp": [
-          "#0E101D",
-          "#282A39",
-          "#444756",
-          "#626575",
-          "#828596",
-          "#A3A7B9",
-          "#C6C9DC",
-          "#EAEEFE"
-        ]
       }
     },
     "typographyMeta": {
@@ -282,74 +346,87 @@
         "displayName": "Display",
         "purpose": "The plan's H1 only."
       },
+      "accent": {
+        "displayName": "Accent",
+        "purpose": "Italic 300 turquoise phrase inside a heading."
+      },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Catalogue and closing section titles."
+        "purpose": "Catalogue and closing titles."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Ficha, group and posgrado category titles."
+        "purpose": "Ficha, group, map and posgrado titles."
       },
-      "plan-label": {
-        "displayName": "Plan label",
-        "purpose": "Uppercase map column heads and requirement terms."
+      "label": {
+        "displayName": "Label",
+        "purpose": "Map column heads, info-cell labels, requirement terms."
       },
       "ui": {
         "displayName": "UI",
-        "purpose": "Buttons, profile options, chips, nav, map nodes."
-      },
-      "data": {
-        "displayName": "Data",
-        "purpose": "Price tables, tabular figures; values at 800."
+        "purpose": "Buttons, options, nodes, nav, chips."
       },
       "meta": {
         "displayName": "Meta",
-        "purpose": "Modality lines, sheet header, legend, notes."
+        "purpose": "Modality lines, month ranges."
       },
-      "stamp": {
-        "displayName": "Stamp",
-        "purpose": "Rubber-stamp status labels."
+      "tag": {
+        "displayName": "Tag",
+        "purpose": "Status pills and the Ave Mujer pill."
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "Price values, tabular."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Descriptions and lead; 16px under 640px."
+        "purpose": "Lead and descriptions."
+      },
+      "body-small": {
+        "displayName": "Body small",
+        "purpose": "Sublines, legend, price labels."
       },
       "body-italic": {
         "displayName": "Body italic",
-        "purpose": "Ficha subtitles and testimonials."
+        "purpose": "Ficha subtitles (turquoise), testimonials."
       },
       "hand": {
         "displayName": "Hand",
-        "purpose": "Adriana's margin notes and signature, always stamp red."
+        "purpose": "Adriana's notes and signature, rose."
       }
     },
     "shadows": [
       {
-        "name": "recommended-ring",
-        "value": "0 0 0 4px #E9F36A",
-        "purpose": "Highlighter ring around a ficha recommended for the chosen profile. Not elevation; the world has no soft shadows."
+        "name": "card-lift",
+        "value": "0 2px 6px rgb(42 111 150 / .06), 0 14px 34px rgb(42 111 150 / .10)",
+        "purpose": "Sheet, fichas, posgrado cards, schedule, band, closing."
+      },
+      {
+        "name": "rest",
+        "value": "0 2px 6px rgb(42 111 150 / .06)",
+        "purpose": "Map nodes (also 0 2px 8px / .08 on profile options and testimonials)."
+      },
+      {
+        "name": "button-glow",
+        "value": "0 6px 16px rgb(42 111 150 / .25)",
+        "purpose": "Primary button; WhatsApp uses rgb(27 127 75 / .22)."
       }
     ],
     "motion": [
       {
-        "name": "highlighter-draw",
-        "value": "stroke-dashoffset .7s cubic-bezier(.16,1,.3,1)",
-        "purpose": "Highlighter stroke drawn along path connectors on profile choice."
+        "name": "path-draw",
+        "value": "stroke-dashoffset .8s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Turquoise stroke drawn along path connectors."
       },
       {
-        "name": "fill-ease",
-        "value": "background .2s",
-        "purpose": "Node fill changes."
-      },
-      {
-        "name": "toast",
-        "value": "opacity .2s, transform .3s",
-        "purpose": "Toast enter/exit."
+        "name": "state-ease",
+        "value": "background/border-color .2s–.25s",
+        "purpose": "Nodes, options, fichas, buttons."
       },
       {
         "name": "reduced-motion",
         "value": "animation:none; transition:none; scroll-behavior:auto",
-        "purpose": "Applied under prefers-reduced-motion."
+        "purpose": "Under prefers-reduced-motion."
       }
     ],
     "breakpoints": [
@@ -363,151 +440,158 @@
       }
     ],
     "containerMaxWidth": "1240px",
-    "mapGrid": "24px",
-    "fonts": "https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Caveat:wght@600&display=swap",
-    "scope": "Academia (public catalogue / escuela) world only. The Ave Mujer members world lives in the root DESIGN.md and .impeccable/design.json."
+    "mapDotGrid": "22px",
+    "logoSlot": "#logoSlot; image height 52px (42px mobile); wordmark fallback until the logo PNG arrives",
+    "fonts": "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;1,300;1,400&family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Caveat:wght@600&display=swap",
+    "scope": "Academia (public catalogue / escuela) world only; palette follows the public Hay un Día site at the client's request. The Ave Mujer members world lives in the root DESIGN.md and .impeccable/design.json."
   },
   "components": [
     {
-      "name": "Ink Button",
+      "name": "Primary Button",
       "kind": "button",
-      "refersTo": "button-ink",
-      "description": "Primary enrol action that links to a product or landing page.",
-      "html": "<a class=\"ds-btn-ink\" href=\"#\">Inscribirme<svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
-      "css": ".ds-btn-ink{appearance:none;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:6px;font-weight:700;font-size:16px;line-height:1;text-decoration:none;white-space:nowrap;transition:background .2s;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;background:#1F2A5C;color:#fff}.ds-btn-ink:hover{background:#2D3A78}.ds-btn-ink:focus-visible{outline:3px solid #B0284A;outline-offset:2px;border-radius:4px}"
+      "refersTo": "button-primary",
+      "description": "Enrol action to a product or landing page.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Inscribirme<svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn-primary{appearance:none;border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 24px;border-radius:999px;font-weight:700;font-size:15px;line-height:1;text-decoration:none;white-space:nowrap;transition:background .2s,box-shadow .2s;font-family:Raleway,'Segoe UI',system-ui,sans-serif;background:#2A6F96;color:#fff;box-shadow:0 6px 16px rgb(42 111 150 / .25)}.ds-btn-primary:hover{background:#1F5A7A}.ds-btn-primary:focus-visible{outline:3px solid #3C9FBF;outline-offset:3px;border-radius:12px}"
     },
     {
       "name": "WhatsApp Button",
       "kind": "button",
       "refersTo": "button-whatsapp",
-      "description": "Every action that opens WhatsApp: Escribime, Pedir mi lugar, Comprar.",
+      "description": "Every action that opens WhatsApp.",
       "html": "<a class=\"ds-btn-wa\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5Z\"/></svg>Escribime</a>",
-      "css": ".ds-btn-wa{appearance:none;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:6px;font-weight:700;font-size:16px;line-height:1;text-decoration:none;white-space:nowrap;transition:background .2s;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;background:#1B7F4B;color:#fff}.ds-btn-wa:hover{filter:brightness(.92)}.ds-btn-wa:focus-visible{outline:3px solid #B0284A;outline-offset:2px;border-radius:4px}"
+      "css": ".ds-btn-wa{appearance:none;border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 24px;border-radius:999px;font-weight:700;font-size:15px;line-height:1;text-decoration:none;white-space:nowrap;transition:background .2s,box-shadow .2s;font-family:Raleway,'Segoe UI',system-ui,sans-serif;background:#1B7F4B;color:#fff;box-shadow:0 6px 16px rgb(27 127 75 / .22)}.ds-btn-wa:hover{filter:brightness(.93)}.ds-btn-wa:focus-visible{outline:3px solid #3C9FBF;outline-offset:3px;border-radius:12px}"
     },
     {
-      "name": "Line Button",
+      "name": "Outline Button",
       "kind": "button",
-      "refersTo": "button-line",
+      "refersTo": "button-outline",
       "description": "Secondary action such as Ver preview.",
-      "html": "<a class=\"ds-btn-line\" href=\"#\">Ver preview</a>",
-      "css": ".ds-btn-line{appearance:none;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:6px;font-weight:700;font-size:16px;line-height:1;text-decoration:none;white-space:nowrap;transition:background .2s;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;background:transparent;color:#1F2A5C;box-shadow:inset 0 0 0 1.5px #1F2A5C}.ds-btn-line:hover{background:#E7E9DE}.ds-btn-line:focus-visible{outline:3px solid #B0284A;outline-offset:2px;border-radius:4px}"
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Ver preview</a>",
+      "css": ".ds-btn-outline{appearance:none;border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 24px;border-radius:999px;font-weight:700;font-size:15px;line-height:1;text-decoration:none;white-space:nowrap;transition:background .2s,box-shadow .2s;font-family:Raleway,'Segoe UI',system-ui,sans-serif;background:#fff;color:#2A6F96;box-shadow:inset 0 0 0 1.5px #3C9FBF}.ds-btn-outline:hover{background:#DDF3F6}.ds-btn-outline:focus-visible{outline:3px solid #3C9FBF;outline-offset:3px;border-radius:12px}"
     },
     {
-      "name": "Profile Selector",
+      "name": "Profile Guide",
       "kind": "custom",
       "refersTo": "profile-option",
-      "description": "Three-option radiogroup; the chosen profile fills with highlighter.",
-      "html": "<div class=\"ds-profiles\" role=\"radiogroup\" aria-label=\"¿Por dónde empiezo?\"><button class=\"ds-prof\" role=\"radio\" aria-checked=\"true\"><span class=\"ds-box\"></span><span>Estoy cursando el básico<small>Memoria Celular, Método Goncalves</small></span></button><button class=\"ds-prof\" role=\"radio\" aria-checked=\"false\"><span class=\"ds-box\"></span><span>Ya soy facilitadora o terapeuta<small>Quiero especializarme y crecer</small></span></button></div>",
-      "css": ".ds-profiles{display:flex;flex-direction:column;gap:6px;max-width:420px}.ds-prof{appearance:none;cursor:pointer;display:flex;align-items:center;gap:12px;min-height:52px;padding:8px 14px;text-align:left;border:1.5px solid #1F2A5C;border-radius:6px;background:#FCFCF7;color:#1F2A5C;font-weight:700;font-size:16px;line-height:1.3;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-prof small{display:block;font-weight:400;font-size:14px;color:#4A5380;margin-top:2px;font-family:'Source Serif 4',Georgia,serif;}.ds-box{width:22px;height:22px;border:1.5px solid #1F2A5C;border-radius:50%;flex:none;display:grid;place-items:center}.ds-prof:hover{background:#E7E9DE}.ds-prof[aria-checked=true],.ds-prof[aria-checked=true]:hover{background:#E9F36A}.ds-prof[aria-checked=true] .ds-box::after{content:'';width:10px;height:10px;border-radius:50%;background:#1F2A5C}.ds-prof:focus-visible{outline:3px solid #B0284A;outline-offset:2px;border-radius:4px}"
+      "description": "Turquoise-washed panel with three white options; the selected one gets a turquoise border and filled radio.",
+      "html": "<div class=\"ds-start\"><h2>¿Por dónde empiezo?</h2><p>Elegí lo que más se parece a tu momento.</p><div class=\"ds-profiles\" role=\"radiogroup\"><button class=\"ds-prof\" role=\"radio\" aria-checked=\"true\"><span class=\"ds-box\"></span><span>Estoy cursando el básico<small>Memoria Celular, Método Goncalves</small></span></button><button class=\"ds-prof\" role=\"radio\" aria-checked=\"false\"><span class=\"ds-box\"></span><span>Ya soy facilitadora o terapeuta<small>Quiero especializarme y crecer</small></span></button></div></div>",
+      "css": ".ds-start{max-width:420px;background:linear-gradient(160deg,#DDF3F6,#F2F9FB);border-radius:22px;padding:20px 20px 18px;color:#1A3A4C}.ds-start h2{margin:0;font-weight:700;font-size:1.3rem;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-start p{margin:2px 0 0;color:#4F6F80;font-size:14px;font-family:'Open Sans','Segoe UI',system-ui,sans-serif;}.ds-profiles{display:flex;flex-direction:column;gap:8px;margin-top:12px}.ds-prof{appearance:none;cursor:pointer;display:flex;align-items:center;gap:12px;min-height:54px;padding:10px 14px;text-align:left;border:1.5px solid transparent;border-radius:16px;background:#fff;color:#1A3A4C;font-weight:700;font-size:15px;line-height:1.3;box-shadow:0 2px 8px rgb(42 111 150 / .08);transition:border-color .2s;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-prof small{display:block;font-weight:400;font-size:13px;line-height:1.35;color:#4F6F80;margin-top:2px;font-family:'Open Sans','Segoe UI',system-ui,sans-serif;}.ds-box{width:22px;height:22px;border:1.5px solid #3C9FBF;border-radius:50%;flex:none;display:grid;place-items:center}.ds-prof:hover{border-color:#48C9D4}.ds-prof[aria-checked=true]{border-color:#3C9FBF}.ds-prof[aria-checked=true] .ds-box{background:#3C9FBF}.ds-prof[aria-checked=true] .ds-box::after{content:'';width:8px;height:8px;border-radius:50%;background:#fff}.ds-prof:focus-visible{outline:3px solid #3C9FBF;outline-offset:3px;border-radius:12px}"
     },
     {
       "name": "Correlativities Map",
       "kind": "custom",
       "refersTo": "map-node",
-      "description": "Signature: boxed subjects in plan columns over a graph grid; the visitor's path fills with highlighter, off-path subjects drop to hairline frames, Ave Mujer nodes carry the outlined seal.",
-      "html": "<div class=\"ds-map\"><div class=\"ds-col\"><h3>Primeros pasos<span>Sin requisitos</span></h3><button class=\"ds-node on\">Tus células hablan de ti<small>Taller gratuito</small></button><button class=\"ds-node dim\">Flores Silvestres · Básico<small>5 meses</small></button></div><div class=\"ds-col\"><h3>Formación<span>Para formarte</span></h3><button class=\"ds-node on\">Curso de Memoria Celular<small>Te forma como facilitadora</small></button><button class=\"ds-node dim\">Membresía Ave Mujer<small>Comunidad</small><span class=\"ds-seal\">Comunidad Ave Mujer</span></button></div></div>",
-      "css": ".ds-map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;padding:22px 24px;border:1.5px solid #1F2A5C;background-color:#FCFCF7;background-image:linear-gradient(#E0E3EA 1px,transparent 1px),linear-gradient(90deg,#E0E3EA 1px,transparent 1px);background-size:24px 24px;color:#1F2A5C}.ds-col{display:flex;flex-direction:column;gap:10px}.ds-col h3{margin:0 0 4px;padding-bottom:8px;border-bottom:1px solid #1F2A5C;font-weight:700;font-size:13px;line-height:1.2;text-transform:uppercase;letter-spacing:.06em;color:#4A5380;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-col h3 span{display:block;text-transform:none;letter-spacing:0;font-weight:500;margin-top:2px}.ds-node{appearance:none;cursor:pointer;position:relative;text-align:left;min-height:48px;padding:10px 12px;border:1.5px solid #1F2A5C;border-radius:6px;background:#FCFCF7;color:#1F2A5C;font-weight:700;font-size:15px;line-height:1.2;transition:background .2s;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-node small{display:block;font-weight:400;font-size:13px;color:#4A5380;margin-top:3px;font-family:'Source Serif 4',Georgia,serif;}.ds-node:hover{background:#E7E9DE}.ds-node.on{background:#E9F36A}.ds-node.dim{border-color:#CBD0DC;background:transparent;color:#4A5380}.ds-node.dim small{color:#4A5380}.ds-seal{display:block;width:max-content;font-weight:800;font-size:11px;line-height:1;text-transform:uppercase;letter-spacing:.05em;color:#C9502A;border:1.5px solid #C9502A;border-radius:3px;padding:3px 5px;margin-top:6px;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-node:focus-visible{outline:3px solid #B0284A;outline-offset:2px;border-radius:4px}"
+      "description": "Signature: rounded subjects in plan columns on a dotted ground; path subjects fill with the path wash, others go quiet; Ave Mujer subjects carry the soft terracotta pill.",
+      "html": "<div class=\"ds-map\"><div class=\"ds-col\"><h3>Primeros pasos<span>Sin requisitos</span></h3><button class=\"ds-node on\">Tus células hablan de ti<small>Taller gratuito</small></button><button class=\"ds-node dim\">Membresía Ave Mujer<small>Comunidad</small><span class=\"ds-seal\">Comunidad Ave Mujer</span></button></div><div class=\"ds-col\"><h3>Formación<span>Para formarte</span></h3><button class=\"ds-node on\">Curso de Memoria Celular<small>Te forma como facilitadora</small></button><button class=\"ds-node\">Lo Transgeneracional<small>Seminario</small></button></div></div>",
+      "css": ".ds-map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;padding:22px 24px;border-radius:22px;background-color:#F2F9FB;background-image:radial-gradient(#D3E9EF 1.2px,transparent 1.3px);background-size:22px 22px;color:#1A3A4C}.ds-col{display:flex;flex-direction:column;gap:10px}.ds-col h3{margin:0 0 4px;padding-bottom:8px;border-bottom:2px solid #48C9D4;font-weight:700;font-size:14px;line-height:1.25;color:#1F5A7A;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-col h3 span{display:block;font-weight:400;font-size:13px;color:#4F6F80;margin-top:2px;font-family:'Open Sans','Segoe UI',system-ui,sans-serif;}.ds-node{appearance:none;cursor:pointer;text-align:left;min-height:48px;padding:10px 13px;border:1.5px solid #D3E9EF;border-radius:14px;background:#fff;color:#1A3A4C;font-weight:700;font-size:14px;line-height:1.3;box-shadow:0 2px 6px rgb(42 111 150 / .06);transition:background .25s,border-color .25s;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-node small{display:block;font-weight:400;font-size:13px;line-height:1.35;color:#4F6F80;margin-top:2px;font-family:'Open Sans','Segoe UI',system-ui,sans-serif;}.ds-node:hover{border-color:#48C9D4}.ds-node.on{background:#BFECF1;border-color:#3C9FBF}.ds-node.dim{background:rgb(255 255 255 / .6);color:#4F6F80;box-shadow:none}.ds-seal{display:block;width:max-content;margin-top:6px;font-weight:700;font-size:12px;line-height:1;color:#C9502A;background:#FDEEE7;border-radius:999px;padding:5px 9px;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-node:focus-visible{outline:3px solid #3C9FBF;outline-offset:3px;border-radius:12px}"
     },
     {
       "name": "Filter Chips",
       "kind": "chip",
       "refersTo": "chip",
-      "description": "Catalogue filters; ink fill when active, highlighter for the profile-only chip.",
+      "description": "Catalogue filters; deep turquoise when active, path wash for the profile-only chip.",
       "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">Todo</button><button class=\"ds-chip\" aria-pressed=\"false\">Cursos</button><button class=\"ds-chip mine\" aria-pressed=\"true\">Solo lo recomendado para mí</button></div>",
-      "css": ".ds-chips{display:flex;gap:8px;flex-wrap:wrap}.ds-chip{appearance:none;cursor:pointer;min-height:44px;padding:8px 16px;border:1.5px solid #1F2A5C;border-radius:999px;background:transparent;color:#1F2A5C;font-weight:700;font-size:15px;line-height:1;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-chip:hover{background:#E7E9DE}.ds-chip[aria-pressed=true]{background:#1F2A5C;color:#fff}.ds-chip.mine[aria-pressed=true]{background:#E9F36A;color:#1F2A5C}.ds-chip:focus-visible{outline:3px solid #B0284A;outline-offset:2px;border-radius:4px}"
+      "css": ".ds-chips{display:flex;gap:8px;flex-wrap:wrap}.ds-chip{appearance:none;cursor:pointer;min-height:44px;padding:8px 18px;border:1.5px solid #D3E9EF;border-radius:999px;background:#fff;color:#1A3A4C;font-weight:600;font-size:14px;line-height:1;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-chip:hover{border-color:#48C9D4}.ds-chip[aria-pressed=true]{background:#2A6F96;border-color:#2A6F96;color:#fff}.ds-chip.mine[aria-pressed=true]{background:#BFECF1;border-color:#3C9FBF;color:#1A3A4C}.ds-chip:focus-visible{outline:3px solid #3C9FBF;outline-offset:3px;border-radius:12px}"
     },
     {
       "name": "Ficha",
       "kind": "card",
       "refersTo": "ficha",
-      "description": "Catalogue card: modality and stamp row, title, requirement, Argentina/abroad prices, one action. Recommended state fills the top row with highlighter, adds a 4px highlighter ring and a Caveat note.",
-      "html": "<article class=\"ds-ficha rec\"><div class=\"ds-ftop\"><span class=\"ds-mod\">Grabado + clases en vivo · 20 módulos</span><span class=\"ds-stamp ok\">Empezás hoy</span></div><div class=\"ds-fbody\"><span class=\"ds-forme\">recomendado para vos</span><h4>Curso de Memoria Celular</h4><p class=\"ds-sub\">Limpieza y Reprogramación · Método Goncalves</p><dl class=\"ds-req\"><dt>Requisito</dt><dd>Ninguno.</dd></dl><table class=\"ds-prices\"><thead><tr><th>Modalidad</th><th class=\"v\">Argentina</th><th class=\"v\">PayPal</th></tr></thead><tbody><tr><td>Mensual · 10 meses</td><td class=\"v\">$80.000</td><td class=\"v\">U$S 85</td></tr></tbody></table></div><div class=\"ds-acts\"><a class=\"ds-fbtn\" href=\"#\">Inscribirme</a></div></article>",
-      "css": ".ds-ficha{max-width:380px;background:#FCFCF7;border:1.5px solid #1F2A5C;border-radius:2px;display:flex;flex-direction:column;color:#1F2A5C;font-size:16px;line-height:1.55;font-family:'Source Serif 4',Georgia,serif;}.ds-ficha.rec{box-shadow:0 0 0 4px #E9F36A}.ds-ftop{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 18px 10px;border-bottom:1px solid #CBD0DC}.ds-ficha.rec .ds-ftop{background:#E9F36A}.ds-mod{font-weight:600;font-size:13px;line-height:1.35;color:#4A5380;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-stamp{flex:none;white-space:nowrap;font-weight:800;font-size:12px;line-height:1.1;text-transform:uppercase;letter-spacing:.05em;color:#B0284A;border:2px solid currentColor;border-radius:4px;padding:5px 7px;transform:rotate(-2.5deg);font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-stamp.ok{color:#1F6B4A}.ds-fbody{padding:10px 18px 0;display:flex;flex-direction:column;gap:8px}.ds-forme{font-family:Caveat,'Segoe Script',cursive;font-weight:600;font-size:1.3rem;line-height:1;color:#B0284A}.ds-ficha h4{margin:0;font-weight:800;font-size:1.4rem;line-height:1.1;font-stretch:106%;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-sub{margin:0;font-style:italic;color:#4A5380}.ds-req{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:4px 0 0;padding:8px 0;border-top:1px solid #CBD0DC;border-bottom:1px solid #CBD0DC;font-size:15px}.ds-req dt{font-weight:700;font-size:13px;line-height:1.5;text-transform:uppercase;letter-spacing:.04em;color:#4A5380;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-req dd{margin:0}.ds-prices{width:100%;border-collapse:collapse;font-weight:500;font-size:14px;line-height:1.3;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-prices th{text-align:left;font-weight:600;color:#4A5380;padding:5px 0;border-bottom:1px solid #CBD0DC}.ds-prices td{padding:6px 0;border-bottom:1px solid #CBD0DC}.ds-prices td:first-child{font-size:13px;color:#4A5380}.ds-prices .v{text-align:right;padding-left:14px;white-space:nowrap}.ds-prices td.v{font-weight:800;color:#1F2A5C;font-variant-numeric:tabular-nums}.ds-acts{display:flex;gap:8px;padding:14px 18px 18px}.ds-fbtn{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border-radius:6px;background:#1F2A5C;color:#fff;text-decoration:none;font-weight:700;font-size:15px;line-height:1;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-fbtn:hover{background:#2D3A78}.ds-fbtn:focus-visible{outline:3px solid #B0284A;outline-offset:2px;border-radius:4px}"
+      "description": "Rounded catalogue card with status pill, requirement box and Argentina/abroad prices; recommended state fills the top row with the path wash.",
+      "html": "<article class=\"ds-ficha rec\"><div class=\"ds-ftop\"><span class=\"ds-mod\">Grabado + clases en vivo · 20 módulos</span><span class=\"ds-pill ok\">Empezás hoy</span></div><div class=\"ds-fbody\"><h4>Curso de Memoria Celular</h4><p class=\"ds-sub\">Limpieza y Reprogramación · Método Goncalves</p><span class=\"ds-forme\">recomendado para vos</span><dl class=\"ds-req\"><dt>Requisito</dt><dd>Ninguno.</dd></dl><table class=\"ds-prices\"><thead><tr><th>Modalidad</th><th class=\"v\">Argentina</th><th class=\"v\">PayPal</th></tr></thead><tbody><tr><td>Mensual · 10 meses</td><td class=\"v\">$80.000</td><td class=\"v\">U$S 85</td></tr></tbody></table></div><div class=\"ds-acts\"><a class=\"ds-fbtn\" href=\"#\">Inscribirme</a></div></article>",
+      "css": ".ds-ficha{max-width:380px;background:#fff;border:1.5px solid transparent;border-radius:22px;box-shadow:0 2px 6px rgb(42 111 150 / .06),0 14px 34px rgb(42 111 150 / .10);display:flex;flex-direction:column;color:#1A3A4C;font-size:15px;line-height:1.65;font-family:'Open Sans','Segoe UI',system-ui,sans-serif;}.ds-ficha.rec{border-color:#48C9D4}.ds-ftop{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px 12px;border-bottom:1px solid #D3E9EF;border-radius:22px 22px 0 0}.ds-ficha.rec .ds-ftop{background:#BFECF1}.ds-mod{font-weight:600;font-size:13px;line-height:1.35;color:#4F6F80;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-pill{display:inline-block;font-weight:700;font-size:12px;line-height:1.1;padding:6px 10px;border-radius:999px;white-space:nowrap;font-family:Raleway,'Segoe UI',system-ui,sans-serif;color:#A2446A;background:#FBE6EC}.ds-pill.ok{color:#2F6E5E;background:#E1F2EC}.ds-fbody{padding:14px 20px 0;display:flex;flex-direction:column;gap:8px}.ds-ficha h4{margin:0;font-weight:700;font-size:1.35rem;line-height:1.2;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-sub{margin:0;font-style:italic;font-size:15px;line-height:1.4;color:#3C9FBF}.ds-forme{font-family:Caveat,'Segoe Script',cursive;font-weight:600;font-size:1.3rem;line-height:1;color:#A2446A}.ds-req{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:4px 0 0;padding:10px 14px;border-radius:14px;background:#F2F9FB;font-size:14px}.ds-req dt{font-weight:700;font-size:13px;line-height:1.6;color:#1F5A7A;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-req dd{margin:0}.ds-prices{width:100%;border-collapse:collapse;font-size:14px;line-height:1.3;margin-top:6px}.ds-prices th{text-align:left;font-weight:600;font-size:13px;color:#4F6F80;padding:6px 0;border-bottom:1px solid #D3E9EF;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-prices td{padding:7px 0;border-bottom:1px solid #D3E9EF}.ds-prices td:first-child{font-size:13px;color:#4F6F80}.ds-prices .v{text-align:right;padding-left:14px;white-space:nowrap}.ds-prices td.v{font-weight:700;font-size:15px;color:#1A3A4C;font-variant-numeric:tabular-nums;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-acts{display:flex;gap:8px;padding:16px 20px 20px}.ds-fbtn{display:inline-flex;align-items:center;min-height:44px;padding:10px 18px;border-radius:999px;background:#2A6F96;color:#fff;text-decoration:none;font-weight:700;font-size:14px;line-height:1;box-shadow:0 6px 16px rgb(42 111 150 / .25);font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-fbtn:hover{background:#1F5A7A}.ds-fbtn:focus-visible{outline:3px solid #3C9FBF;outline-offset:3px;border-radius:12px}"
     },
     {
-      "name": "Status Stamps and Tags",
+      "name": "Status Pills",
       "kind": "chip",
-      "refersTo": "stamp-status",
-      "description": "Rubber stamps for enrollment state on fichas and for posgrado months, plus the Ave Mujer seal. No filled pills.",
-      "html": "<div class=\"ds-row\"><span class=\"ds-stp\">16/10</span><span class=\"ds-stp ok\">Inicia todos los meses</span><span class=\"ds-stp calm\">Reabre en noviembre</span></div><div class=\"ds-row\"><span class=\"ds-tag now\">Este mes</span><span class=\"ds-tag next\">Próximo · Noviembre 2026</span><span class=\"ds-tag rec\">Grabado disponible</span></div><div class=\"ds-row\"><span class=\"ds-seal2\">Comunidad Ave Mujer</span></div>",
-      "css": ".ds-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:14px}.ds-stp{font-weight:800;font-size:12px;line-height:1.1;text-transform:uppercase;letter-spacing:.05em;color:#B0284A;border:2px solid currentColor;border-radius:4px;padding:5px 7px;transform:rotate(-2.5deg);white-space:nowrap;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-stp.ok{color:#1F6B4A}.ds-stp.calm{color:#4A5380}.ds-tag{display:inline-block;font-weight:800;font-size:12px;line-height:1.1;text-transform:uppercase;letter-spacing:.04em;padding:4px 6px;border:2px solid currentColor;border-radius:3px;transform:rotate(-2deg);white-space:nowrap;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-tag.now{color:#B0284A}.ds-tag.next{color:#1F2A5C}.ds-tag.rec{color:#1F6B4A}.ds-seal2{display:inline-block;font-weight:800;font-size:11px;line-height:1;text-transform:uppercase;letter-spacing:.05em;color:#C9502A;border:1.5px solid #C9502A;border-radius:3px;padding:3px 5px;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}"
+      "refersTo": "status-open",
+      "description": "Soft status pills: sage open, rose dated or this month, lavender waiting; plus the Ave Mujer pill.",
+      "html": "<div class=\"ds-row\"><span class=\"ds-st ok\">Grabado disponible</span><span class=\"ds-st now\">Este mes</span><span class=\"ds-st calm\">Próximo · Noviembre 2026</span><span class=\"ds-st ave\">Comunidad Ave Mujer</span></div>",
+      "css": ".ds-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.ds-st{display:inline-block;font-weight:700;font-size:12px;line-height:1.1;padding:6px 10px;border-radius:999px;white-space:nowrap;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-st.ok{color:#2F6E5E;background:#E1F2EC}.ds-st.now{color:#A2446A;background:#FBE6EC}.ds-st.calm{color:#5D5292;background:#ECE9F7}.ds-st.ave{color:#C9502A;background:#FDEEE7;padding:5px 9px}"
     },
     {
       "name": "Capelinas Band",
       "kind": "card",
-      "refersTo": "band-ink",
-      "description": "Full-width ink band for the year-round prerequisite, with a white button.",
+      "refersTo": "band-turquoise",
+      "description": "Turquoise gradient band for the year-round prerequisite, with a white button.",
       "html": "<div class=\"ds-capel\"><div><h4>Actualización de Capelinas · disponible todo el año</h4><p>Fundamental antes de cualquier posgrado.</p></div><a class=\"ds-capel-btn\" href=\"#\">Consultar</a></div>",
-      "css": ".ds-capel{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;background:#1F2A5C;color:#fff;border-radius:8px;padding:18px 20px}.ds-capel h4{margin:0;color:#fff;font-weight:800;font-size:1.3rem;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-capel p{margin:4px 0 0;color:#D9DDF0;font-size:15px;font-family:'Source Serif 4',Georgia,serif;}.ds-capel-btn{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border-radius:6px;background:#fff;color:#1F2A5C;text-decoration:none;font-weight:700;font-size:15px;line-height:1;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-capel-btn:focus-visible{outline:3px solid #B0284A;outline-offset:2px;border-radius:4px}"
+      "css": ".ds-capel{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;background:linear-gradient(120deg,#3C9FBF,#2A6F96);color:#fff;border-radius:22px;padding:20px 24px;box-shadow:0 2px 6px rgb(42 111 150 / .06),0 14px 34px rgb(42 111 150 / .10);}.ds-capel h4{margin:0;color:#fff;font-weight:700;font-size:1.25rem;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-capel p{margin:4px 0 0;color:#fff;font-size:14px;font-family:'Open Sans','Segoe UI',system-ui,sans-serif;}.ds-capel-btn{display:inline-flex;align-items:center;min-height:44px;padding:10px 18px;border-radius:999px;background:#fff;color:#1F5A7A;text-decoration:none;font-weight:700;font-size:14px;line-height:1;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-capel-btn:focus-visible{outline:3px solid #3C9FBF;outline-offset:3px;border-radius:12px}"
     },
     {
       "name": "Top Bar",
       "kind": "nav",
       "refersTo": "button-whatsapp",
-      "description": "Sticky paper bar with two-line brand, section links and a small WhatsApp button.",
-      "html": "<header class=\"ds-top\"><a class=\"ds-brand\" href=\"#\"><b>Academia Hay un Día</b><span>Escuela de Memoria Celular · Rosario</span></a><nav class=\"ds-tnav\"><a href=\"#\">Plan de estudios</a><a href=\"#\">Cursos</a><a href=\"#\">Posgrados</a></nav><a class=\"ds-wa-sm\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5Z\"/></svg>Escribime</a></header>",
-      "css": ".ds-top{display:flex;align-items:center;gap:20px;min-height:64px;padding:0 24px;background:#F2F3EC;border-bottom:1.5px solid #1F2A5C;color:#1F2A5C;font-family:Archivo,'Arial Narrow',system-ui,sans-serif;}.ds-brand{display:flex;flex-direction:column;line-height:1;text-decoration:none;color:#1F2A5C}.ds-brand b{font-weight:800;font-size:20px;font-stretch:118%;letter-spacing:.01em}.ds-brand span{font-weight:500;font-size:13px;color:#4A5380;margin-top:4px}.ds-tnav{display:flex;gap:2px;margin-left:auto}.ds-tnav a{font-weight:700;font-size:15px;line-height:1;text-decoration:none;color:#1F2A5C;padding:14px 12px;border-radius:6px}.ds-tnav a:hover{background:#E7E9DE}.ds-wa-sm{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:6px;background:#1B7F4B;color:#fff;text-decoration:none;font-weight:700;font-size:15px;line-height:1}.ds-tnav a:focus-visible{outline:3px solid #B0284A;outline-offset:2px;border-radius:4px}.ds-wa-sm:focus-visible{outline:3px solid #B0284A;outline-offset:2px;border-radius:4px}"
+      "description": "Translucent sticky bar with the logo slot (wordmark fallback), Academia label, pill nav and WhatsApp button.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-logo\">Hay un <i>Día</i></span><span class=\"ds-btxt\"><b>Academia</b><span>Escuela de Memoria Celular · Rosario</span></span></a><nav class=\"ds-tnav\"><a href=\"#\">Plan de estudios</a><a href=\"#\">Cursos</a><a href=\"#\">Posgrados</a></nav><a class=\"ds-wa-sm\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5Z\"/></svg>Escribime</a></header>",
+      "css": ".ds-top{display:flex;align-items:center;gap:20px;min-height:72px;padding:0 24px;background:rgb(255 255 255 / .94);backdrop-filter:blur(8px);border-bottom:1px solid #D3E9EF;color:#1A3A4C}.ds-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#1A3A4C}.ds-logo{font-weight:700;font-size:22px;line-height:1;color:#2A6F96;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-logo i{font-weight:300;color:#3C9FBF}.ds-btxt{display:flex;flex-direction:column;line-height:1.2;border-left:1px solid #D3E9EF;padding-left:12px}.ds-btxt b{font-weight:700;font-size:15px;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-btxt span{font-size:13px;color:#4F6F80;font-family:'Open Sans','Segoe UI',system-ui,sans-serif;}.ds-tnav{display:flex;gap:2px;margin-left:auto}.ds-tnav a{font-weight:600;font-size:15px;line-height:1;text-decoration:none;color:#1A3A4C;padding:12px 14px;border-radius:999px;font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-tnav a:hover{background:#DDF3F6;color:#1F5A7A}.ds-wa-sm{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 18px;border-radius:999px;background:#1B7F4B;color:#fff;text-decoration:none;font-weight:700;font-size:14px;line-height:1;box-shadow:0 6px 16px rgb(27 127 75 / .22);font-family:Raleway,'Segoe UI',system-ui,sans-serif;}.ds-tnav a:focus-visible{outline:3px solid #3C9FBF;outline-offset:3px;border-radius:12px}.ds-wa-sm:focus-visible{outline:3px solid #3C9FBF;outline-offset:3px;border-radius:12px}"
     }
   ],
   "narrative": {
-    "northStar": "El plan de estudios con correlatividades",
-    "overview": "The academy is drawn as an official study-plan document. One framed sheet opens the page: a ruled header strip (plan, cycle, modality, direction), a heavy expanded headline, and a correlativities map laid over a faint graph grid, where every offer sits as a boxed subject in one of four columns (Primeros pasos · Formación · Especialización · Comunidad profesional) joined by ink connectors. The visitor picks her profile and a yellow-green highlighter is dragged along her path; matching subjects light up and the rest drop to hairline frames. Below the sheet the plan's \"fichas\" list every option with modality, requirement, prices for Argentina and abroad, a rubber-stamped status and one way to enroll.\n\nThe material is paper, ink and office supplies: cool off-white paper, a brighter sheet, ink-blue type and hairline rules, a highlighter, rubber stamps in red and green, and Adriana's handwriting in the margin. Depth is drawn, not lit: 1.5px ink frames and 1px rules, no soft shadows. Archivo in its expanded widths carries headings, labels and data like a printed form; Source Serif 4 carries reading text; Caveat is reserved for Adriana's margin notes. Adriana speaks in the first person (\"te marco el camino\", \"Escribime\").\n\n**Scope.** This document covers only the **Academia world**: the public catalogue / escuela of Hay un Día (communities, courses, workshops, posgrados and their schedule), built in `prototipos/academia/index.html` and intended to become the public `/escuela` page. The **Ave Mujer members world** (Mastermind and Membresía dashboards, LearnDash lesson pages) is documented separately in the root `DESIGN.md` and its `.impeccable/design.json`; the public turquoise marketing identity belongs to neither. Do not mix tokens across these worlds. The one sanctioned crossing is the Ave Mujer terracotta (`ave`), which appears here only as a small outlined \"Comunidad Ave Mujer\" seal on Ave Mujer community items.",
+    "northStar": "El plan de estudios en celeste",
+    "overview": "The academy is still a study plan with correlativities, now drawn soft. A large rounded white sheet opens the page: a row of pale-turquoise information cells (plan, cycle, modality, direction), a light Raleway headline with an italic turquoise accent, a profile guide in a turquoise-washed panel, and a correlativities map on a dotted pale ground, where every offer is a rounded white subject in one of four columns (Primeros pasos · Formación · Especialización · Comunidad profesional) joined by thin turquoise connectors. The visitor picks her profile and a turquoise stroke draws along her path; her subjects fill with a pale \"path\" turquoise and the rest go quiet. Below the sheet, rounded fichas list every option with modality, requirement, prices for Argentina and abroad, a soft status pill and one way to enroll.\n\n**Palette origin.** At the client's request (Lorena, for Adriana), the palette follows the public Hay un Día site: light turquoise blues for grounds, washes and actions, deep navy only for text, with Raleway and Open Sans as on that site. This replaces the earlier paper-and-ink rendition of this world; the structure (study plan, correlativities map, profile guide, fichas, posgrado schedule) is unchanged. The world is softer and more feminine: generous rounded corners, soft blurred shadows, and three gentle status hues (sage, rose, lavender). Adriana writes her margin notes in rose Caveat, in the first person.\n\n**Scope.** This document covers only the **Academia world**: the public catalogue / escuela of Hay un Día (communities, courses, workshops, posgrados and their schedule), built in `prototipos/academia/index.html` and intended to become the public `/escuela` page. The **Ave Mujer members world** (Mastermind and Membresía dashboards, LearnDash lesson pages) is documented separately in the root `DESIGN.md` and its `.impeccable/design.json`. Academia now shares the public site's turquoise palette and Raleway / Open Sans, but its tokens and components are recorded only here. Do not mix tokens between Academia and the Ave Mujer members world. The one sanctioned crossing is the Ave Mujer terracotta (`ave`), which appears here only as a small soft \"Comunidad Ave Mujer\" pill on Ave Mujer community items.",
     "keyCharacteristics": [
-      "One framed study-plan sheet with a ruled header strip is the opening; the correlativities map is the primary navigation.",
-      "The highlighter is the visitor's own path: it fills the selected profile, the subjects on her path, the connectors between them and the \"next\" tags.",
-      "Status is stamped, not badged: tilted, outlined, uppercase rubber stamps in red, green or ink, on fichas and on posgrado rows alike.",
-      "Drawn depth only: 1.5px ink frames, 1px hairline rules, a 24px graph grid behind the map. No soft shadows.",
-      "Archivo (expanded) for structure and data, Source Serif 4 for reading, Caveat only for Adriana's margin notes.",
-      "Every price row shows Argentina and abroad side by side, in tabular figures."
+      "One large rounded white sheet opens the page; the correlativities map inside it is the way into the catalogue.",
+      "Pale turquoise for grounds and washes, mid turquoise for actions and accents, deep navy only for text.",
+      "The visitor's path is a turquoise wash (`path`) plus a drawn turquoise stroke, never a different hue.",
+      "Status is a soft pill in one of three hues: sage = open or available, rose = dated or this month, lavender = upcoming or waiting.",
+      "Generous radii (14–28px), pill buttons and chips, soft blurred shadows instead of frames.",
+      "Raleway for headings and UI with light-italic turquoise accents, Open Sans for reading, Caveat in rose for Adriana's notes.",
+      "A logo slot in the header carries the Hay un Día wordmark until the logo file arrives."
     ],
     "rules": [
       {
-        "name": "The Highlighter Belongs to the Visitor Rule",
-        "body": "The highlighter marks what is hers: her chosen profile, her path, her recommendations, and the current month in the schedule. It is never a button fill, a status tag or a decoration on a card off her path. The build carries one exception: the highlighted H1 phrase \"en Hay un Día\".",
+        "name": "The Navy Is for Words Rule",
+        "body": "Deep navy (`ink`) is a text colour. Grounds, fills, buttons and bands are turquoise, white or a wash; there are no navy surfaces except the transient toast.",
         "section": "colors"
       },
       {
-        "name": "The Stamp Is the Status Rule",
-        "body": "Status is always a tilted, outlined rubber stamp: in the ficha's top-right corner (red for dated, green for open, ink-2 for waiting) and on posgrado rows (red \"Este mes\", ink \"Próximo\", green \"Grabado disponible\"). There are no filled status pills anywhere.",
+        "name": "The Path Is Turquoise Rule",
+        "body": "The visitor's own path is marked with `path` fills and the `tq` stroke only. It never borrows a status hue.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Soft Hues Rule",
+        "body": "Status is a pill in sage (open), rose (dated / now) or lavender (waiting). The hues are not used for anything else, except rose for Adriana's handwriting.",
         "section": "colors"
       },
       {
         "name": "The Borrowed Terracotta Rule",
-        "body": "Terracotta appears only as the outlined \"Comunidad Ave Mujer\" seal on Ave Mujer community items. It is never a fill, a band, a stripe, a button, a link or a highlight in this world.",
+        "body": "Terracotta appears only as the soft \"Comunidad Ave Mujer\" pill. It is never a button, a band or a highlight.",
         "section": "colors"
       },
       {
-        "name": "The Form and the Reader Rule",
-        "body": "Anything structural, numeric or actionable is Archivo; anything to be read as prose is Source Serif 4. Do not set descriptions in Archivo or buttons in the serif.",
+        "name": "The Light Accent Rule",
+        "body": "Each heading may carry one italic Raleway 300 phrase in turquoise; never a whole heading, never body text.",
         "section": "typography"
       },
       {
         "name": "The Margin Note Rule",
-        "body": "Caveat is Adriana's pen: short notes and her name only, always in stamp red, never a heading and never more than one line of guidance.",
+        "body": "Caveat is Adriana's pen: short notes and her name only, always in rose, never a heading.",
         "section": "typography"
       },
       {
-        "name": "The Drawn Frame Rule",
-        "body": "Separate things with a ruled line or an ink frame, never a blur shadow. Heavy structure (sheet, section heads, top bar) uses 1.5px ink; content subdivisions use 1px `rule`.",
+        "name": "The One Lift Rule",
+        "body": "Every top-level container uses the same card lift; do not invent stronger or darker shadows. Shadows are always tinted turquoise (or green under the WhatsApp button), never grey or black.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do open with the framed study-plan sheet and make the correlativities map the way into the catalogue.",
-      "Do use the highlighter only for the visitor's profile, path and recommendations, and for the current month in the schedule.",
-      "Do show every status as a tilted rubber stamp: red for dated or \"this month\", green for open or recorded, ink or ink-2 for upcoming or waiting.",
-      "Do separate with 1.5px ink frames and 1px hairlines; keep surfaces flat.",
-      "Do give every ficha its modality, requirement, Argentina and abroad prices in tabular figures, and exactly one enrol or consult action (plus an optional preview).",
-      "Do use the WhatsApp-green button for every action that opens WhatsApp, and the ink button for product or landing links.",
-      "Do keep Caveat to Adriana's short notes and signature, in stamp red."
+      "Do keep the study-plan structure: info row, profile guide, correlativities map, fichas, posgrado schedule.",
+      "Do use turquoise and its washes for every ground, fill and action, and navy only for text.",
+      "Do mark the visitor's path, recommendations and the current month with `path` and the `tq` stroke.",
+      "Do show status as a soft pill: sage for open or available, rose for dated or this month, lavender for upcoming or waiting.",
+      "Do use the shared card lift on top-level containers and full pills for buttons, chips and tags.",
+      "Do give every ficha modality, requirement, Argentina and abroad prices in tabular figures, and one enrol or consult action (plus an optional preview).",
+      "Do keep Caveat to Adriana's short notes and signature, in rose."
     ],
     "donts": [
-      "Don't add a photo hero over a grid of equal pastel course cards; this world refused that layout.",
-      "Don't use soft drop shadows for depth.",
-      "Don't use terracotta for anything except the outlined Ave Mujer seal; no terracotta bands, stripes or fills.",
-      "Don't use filled pills for status, or opacity to fade off-path content.",
-      "Don't set text in `ink-3`, `highlighter-deep`, `rule` or `grid`; they are line and fill colours.",
-      "Don't bring Ave Mujer members-world tokens (Cormorant, Karla, ivory-blush ground, night rail) or the turquoise marketing identity into this world."
+      "Don't use navy as a surface or button fill.",
+      "Don't use rotated stamps, hard ink frames or square corners; this world is soft and rounded.",
+      "Don't set small text in `tq-2` or `tq`; they are for large accents, rings, strokes and marks.",
+      "Don't use terracotta for anything except the Ave Mujer pill.",
+      "Don't use grey or black shadows, or more than the one card lift.",
+      "Don't bring Ave Mujer members-world tokens (Cormorant, Karla, ivory-blush ground, night rail) into this world."
     ]
   }
 }

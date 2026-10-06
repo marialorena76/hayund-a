@@ -15,6 +15,10 @@ Content (real, from /escuela, landings and WooCommerce): communities (Membresía
 
 Open: Memoria de Órganos module numbering conflicts (escuela cronograma says Oct = módulo 3; Adriana's October flyer says módulo 2 on 17/10; prototype follows the flyer); "Si no tuvieras miedo" price unknown; "Mis dientes dicen" started April 2026 (next cohort unknown).
 
+## Client restyle (2026-10-06)
+
+Lorena asked for the Hay un Día site palette (light turquoise blues, navy only for text), Raleway/Open Sans, rounded soft shapes and a more feminine, "more Adriana" feel, plus the Hay un Día logo. Structure (study plan, correlativities map, profile guide, fichas, schedule) is kept; OWN-WORLD below is superseded by prototipos/academia/DESIGN.md. Logo slot pending the PNG (logo@4x / LOGO 01@4x in WP media).
+
 ## Direction contract
 
 THESIS: The academy is a study plan with correlativities: one map shows how every offer connects, from first step to specialization, and the visitor's profile highlights her own path. It refuses the category default of a photo hero over a grid of equal pastel course cards.
