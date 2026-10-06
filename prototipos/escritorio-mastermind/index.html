@@ -10,7 +10,7 @@
   --surface-2:#FBF6F2;
   --ink:#1A3A4C;
   --ink-2:#3D6B85;
-  --ink-3:#5B7F93;
+  --ink-3:#4A6E82;
   --line:#EBDCD2;
   --rail:#1A3A4C;
   --rail-2:#24495E;
@@ -21,7 +21,8 @@
   --terra-wash:#FBEDE4;
   --amber:#ED9615;
   --amber-wash:#FDF1DC;
-  --done:#2E7FAE;
+  --done:#286F9A;
+  --done-ink:#18587E;
   --done-wash:#E1F0F8;
   --blush:#F6E2D5;
   --school:#E3EBF0;
@@ -61,7 +62,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .rail{background:var(--rail);color:var(--rail-ink);position:sticky;top:0;height:100vh;display:flex;flex-direction:column;padding:28px 18px 22px;gap:28px;overflow-y:auto}
 .brand{display:flex;flex-direction:column;gap:2px;padding:0 10px}
 .brand .name{font:600 30px/1 var(--f-display);color:#fff}
-.brand .sub{color:var(--amber)}
+.brand .sub{color:var(--blush)}
 .nav{display:flex;flex-direction:column;gap:2px}
 .nav a{display:flex;align-items:center;gap:12px;min-height:44px;padding:10px 12px;border-radius:var(--r-md);color:var(--rail-ink);text-decoration:none;font-weight:500}
 .nav a:hover{background:var(--rail-2)}
@@ -69,7 +70,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .nav a[aria-current="true"] svg{color:var(--terra)}
 .rail-foot{margin-top:auto;display:flex;flex-direction:column;gap:14px;padding:0 10px}
 .member{display:flex;align-items:center;gap:12px}
-.avatar{width:40px;height:40px;border-radius:50%;background:var(--amber);color:var(--ink);display:grid;place-items:center;font-weight:700;flex:none}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--blush);color:var(--ink);display:grid;place-items:center;font-weight:700;flex:none}
 .member small{display:block;color:var(--rail-ink-2);font-size:13px}
 .rail-foot a{color:var(--rail-ink);font-size:14px;display:flex;align-items:center;gap:8px;min-height:32px}
 
@@ -113,7 +114,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .pill svg{margin-top:1px}
 .pill svg{width:12px;height:12px;stroke-width:2.6}
 .pill.live{background:var(--terra);color:#fff}
-.pill.rec{background:var(--done-wash);color:#18587E}
+.pill.rec{background:var(--done-wash);color:var(--done-ink)}
 .pill.school{background:var(--school);color:var(--school-ink)}
 .day[aria-pressed="true"] .pill.rec{background:#fff}
 .day[aria-pressed="true"] .pill.school{background:#fff;color:var(--ink)}
@@ -149,7 +150,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .status{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;align-self:flex-start;padding:6px 12px;border-radius:999px}
 .status.live{background:var(--terra);color:#fff}
 .status.soon{background:var(--terra-wash);color:var(--terra-deep)}
-.status.rec{background:var(--done-wash);color:#18587E}
+.status.rec{background:var(--done-wash);color:var(--done-ink)}
 .status.school{background:var(--school);color:var(--school-ink)}
 .status.quiet{background:var(--surface-2);color:var(--ink-2)}
 .status .blink{width:8px;height:8px;border-radius:50%;background:#fff;animation:pulse 1.6s infinite}
@@ -185,7 +186,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .dots button{appearance:none;border:0;cursor:pointer;aspect-ratio:1;border-radius:50%;min-width:0;background:var(--surface-2);box-shadow:inset 0 0 0 2px var(--line);font:700 12px/1 var(--f-ui);color:var(--ink-2);display:grid;place-items:center}
 .dots button.done{background:var(--done);box-shadow:none;color:#fff}
 .dots button.next{box-shadow:inset 0 0 0 2px var(--terra);color:var(--terra-deep)}
-.complete-note{display:flex;gap:10px;align-items:center;padding:12px 24px 18px;color:#18587E;font-weight:700}
+.complete-note{display:flex;gap:10px;align-items:center;padding:12px 24px 18px;color:var(--done-ink);font-weight:700}
 
 /* recordings table */
 .rec-table{width:100%;border-collapse:collapse;background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden}
@@ -194,7 +195,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .rec-table td.date{white-space:nowrap;color:var(--ink-2)}
 .rec-table td.title{font-weight:700;width:100%}
 .rec-table .state{white-space:nowrap;font-size:14px;color:var(--ink-2)}
-.rec-table .state.seen{color:#18587E;font-weight:700}
+.rec-table .state.seen{color:var(--done-ink);font-weight:700}
 .rec-note{color:var(--ink-2);font-size:14px;display:flex;gap:8px;align-items:center}
 
 /* library + tools */

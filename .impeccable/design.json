@@ -1,0 +1,657 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T21:55:35+00:00",
+  "title": "Design System: Ave Mujer · Escritorios de miembras",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Ivory-Blush Ground",
+        "canonical": "#F7EEE8",
+        "oklch": "oklch(95.4% 0.013 56.3)",
+        "tonalRamp": [
+          "oklch(15% 0.013 56.3)",
+          "oklch(26% 0.013 56.3)",
+          "oklch(37% 0.013 56.3)",
+          "oklch(48% 0.013 56.3)",
+          "oklch(59% 0.013 56.3)",
+          "oklch(70% 0.013 56.3)",
+          "oklch(82% 0.013 56.3)",
+          "oklch(95% 0.013 56.3)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#FFFFFF",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(37% 0.000 89.9)",
+          "oklch(48% 0.000 89.9)",
+          "oklch(59% 0.000 89.9)",
+          "oklch(70% 0.000 89.9)",
+          "oklch(82% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "surface-2": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "#FBF6F2",
+        "oklch": "oklch(97.6% 0.008 61.5)",
+        "tonalRamp": [
+          "oklch(15% 0.008 61.5)",
+          "oklch(26% 0.008 61.5)",
+          "oklch(37% 0.008 61.5)",
+          "oklch(48% 0.008 61.5)",
+          "oklch(59% 0.008 61.5)",
+          "oklch(70% 0.008 61.5)",
+          "oklch(82% 0.008 61.5)",
+          "oklch(95% 0.008 61.5)"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#F3E4DA",
+        "oklch": "oklch(92.8% 0.021 56.1)",
+        "tonalRamp": [
+          "oklch(15% 0.021 56.1)",
+          "oklch(26% 0.021 56.1)",
+          "oklch(37% 0.021 56.1)",
+          "oklch(48% 0.021 56.1)",
+          "oklch(59% 0.021 56.1)",
+          "oklch(70% 0.021 56.1)",
+          "oklch(82% 0.021 56.1)",
+          "oklch(95% 0.021 56.1)"
+        ]
+      },
+      "blush": {
+        "role": "neutral",
+        "displayName": "Blush",
+        "canonical": "#F6E2D5",
+        "oklch": "oklch(92.5% 0.028 55.3)",
+        "tonalRamp": [
+          "oklch(15% 0.028 55.3)",
+          "oklch(26% 0.028 55.3)",
+          "oklch(37% 0.028 55.3)",
+          "oklch(48% 0.028 55.3)",
+          "oklch(59% 0.028 55.3)",
+          "oklch(70% 0.028 55.3)",
+          "oklch(82% 0.028 55.3)",
+          "oklch(95% 0.028 55.3)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#EBDCD2",
+        "oklch": "oklch(90.4% 0.021 56.1)",
+        "tonalRamp": [
+          "oklch(15% 0.021 56.1)",
+          "oklch(26% 0.021 56.1)",
+          "oklch(37% 0.021 56.1)",
+          "oklch(48% 0.021 56.1)",
+          "oklch(59% 0.021 56.1)",
+          "oklch(70% 0.021 56.1)",
+          "oklch(82% 0.021 56.1)",
+          "oklch(95% 0.021 56.1)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Night Ink",
+        "canonical": "#1A3A4C",
+        "oklch": "oklch(33.3% 0.049 235.5)",
+        "tonalRamp": [
+          "oklch(15% 0.049 235.5)",
+          "oklch(26% 0.049 235.5)",
+          "oklch(37% 0.049 235.5)",
+          "oklch(48% 0.049 235.5)",
+          "oklch(59% 0.049 235.5)",
+          "oklch(70% 0.049 235.5)",
+          "oklch(82% 0.049 235.5)",
+          "oklch(95% 0.049 235.5)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Dusk Ink",
+        "canonical": "#3D6B85",
+        "oklch": "oklch(50.6% 0.065 234.9)",
+        "tonalRamp": [
+          "oklch(15% 0.060 234.9)",
+          "oklch(26% 0.065 234.9)",
+          "oklch(37% 0.065 234.9)",
+          "oklch(48% 0.065 234.9)",
+          "oklch(59% 0.065 234.9)",
+          "oklch(70% 0.065 234.9)",
+          "oklch(82% 0.065 234.9)",
+          "oklch(95% 0.060 234.9)"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Faded Ink",
+        "canonical": "#4A6E82",
+        "oklch": "oklch(51.9% 0.052 233.4)",
+        "tonalRamp": [
+          "oklch(15% 0.052 233.4)",
+          "oklch(26% 0.052 233.4)",
+          "oklch(37% 0.052 233.4)",
+          "oklch(48% 0.052 233.4)",
+          "oklch(59% 0.052 233.4)",
+          "oklch(70% 0.052 233.4)",
+          "oklch(82% 0.052 233.4)",
+          "oklch(95% 0.052 233.4)"
+        ]
+      },
+      "rail": {
+        "role": "neutral",
+        "displayName": "Night Rail",
+        "canonical": "#1A3A4C",
+        "oklch": "oklch(33.3% 0.049 235.5)",
+        "tonalRamp": [
+          "oklch(15% 0.049 235.5)",
+          "oklch(26% 0.049 235.5)",
+          "oklch(37% 0.049 235.5)",
+          "oklch(48% 0.049 235.5)",
+          "oklch(59% 0.049 235.5)",
+          "oklch(70% 0.049 235.5)",
+          "oklch(82% 0.049 235.5)",
+          "oklch(95% 0.049 235.5)"
+        ]
+      },
+      "rail-2": {
+        "role": "neutral",
+        "displayName": "Rail Hover",
+        "canonical": "#24495E",
+        "oklch": "oklch(38.8% 0.055 235.5)",
+        "tonalRamp": [
+          "oklch(15% 0.055 235.5)",
+          "oklch(26% 0.055 235.5)",
+          "oklch(37% 0.055 235.5)",
+          "oklch(48% 0.055 235.5)",
+          "oklch(59% 0.055 235.5)",
+          "oklch(70% 0.055 235.5)",
+          "oklch(82% 0.055 235.5)",
+          "oklch(95% 0.055 235.5)"
+        ]
+      },
+      "rail-ink": {
+        "role": "neutral",
+        "displayName": "Rail Ink",
+        "canonical": "#DDEEF1",
+        "oklch": "oklch(93.7% 0.018 209.4)",
+        "tonalRamp": [
+          "oklch(15% 0.018 209.4)",
+          "oklch(26% 0.018 209.4)",
+          "oklch(37% 0.018 209.4)",
+          "oklch(48% 0.018 209.4)",
+          "oklch(59% 0.018 209.4)",
+          "oklch(70% 0.018 209.4)",
+          "oklch(82% 0.018 209.4)",
+          "oklch(95% 0.018 209.4)"
+        ]
+      },
+      "rail-ink-2": {
+        "role": "neutral",
+        "displayName": "Rail Ink Soft",
+        "canonical": "#A9C7D3",
+        "oklch": "oklch(81.1% 0.036 224.0)",
+        "tonalRamp": [
+          "oklch(15% 0.036 224.0)",
+          "oklch(26% 0.036 224.0)",
+          "oklch(37% 0.036 224.0)",
+          "oklch(48% 0.036 224.0)",
+          "oklch(59% 0.036 224.0)",
+          "oklch(70% 0.036 224.0)",
+          "oklch(82% 0.036 224.0)",
+          "oklch(95% 0.036 224.0)"
+        ]
+      },
+      "terra": {
+        "role": "primary",
+        "displayName": "Terracotta Live",
+        "canonical": "#C9502A",
+        "oklch": "oklch(58.5% 0.163 37.4)",
+        "tonalRamp": [
+          "oklch(15% 0.060 37.4)",
+          "oklch(26% 0.160 37.4)",
+          "oklch(37% 0.160 37.4)",
+          "oklch(48% 0.160 37.4)",
+          "oklch(59% 0.160 37.4)",
+          "oklch(70% 0.160 37.4)",
+          "oklch(82% 0.160 37.4)",
+          "oklch(95% 0.060 37.4)"
+        ]
+      },
+      "terra-deep": {
+        "role": "primary",
+        "displayName": "Fired Terracotta",
+        "canonical": "#A8401F",
+        "oklch": "oklch(51.0% 0.145 37.4)",
+        "tonalRamp": [
+          "oklch(15% 0.060 37.4)",
+          "oklch(26% 0.145 37.4)",
+          "oklch(37% 0.145 37.4)",
+          "oklch(48% 0.145 37.4)",
+          "oklch(59% 0.145 37.4)",
+          "oklch(70% 0.145 37.4)",
+          "oklch(82% 0.145 37.4)",
+          "oklch(95% 0.060 37.4)"
+        ]
+      },
+      "terra-wash": {
+        "role": "primary",
+        "displayName": "Terracotta Wash",
+        "canonical": "#FBEDE4",
+        "oklch": "oklch(95.5% 0.019 55.1)",
+        "tonalRamp": [
+          "oklch(15% 0.019 55.1)",
+          "oklch(26% 0.019 55.1)",
+          "oklch(37% 0.019 55.1)",
+          "oklch(48% 0.019 55.1)",
+          "oklch(59% 0.019 55.1)",
+          "oklch(70% 0.019 55.1)",
+          "oklch(82% 0.019 55.1)",
+          "oklch(95% 0.019 55.1)"
+        ]
+      },
+      "amber": {
+        "role": "secondary",
+        "displayName": "Day Amber",
+        "canonical": "#ED9615",
+        "oklch": "oklch(74.5% 0.159 68.0)",
+        "tonalRamp": [
+          "oklch(15% 0.060 68.0)",
+          "oklch(26% 0.159 68.0)",
+          "oklch(37% 0.159 68.0)",
+          "oklch(48% 0.159 68.0)",
+          "oklch(59% 0.159 68.0)",
+          "oklch(70% 0.159 68.0)",
+          "oklch(82% 0.159 68.0)",
+          "oklch(95% 0.060 68.0)"
+        ]
+      },
+      "amber-wash": {
+        "role": "secondary",
+        "displayName": "Amber Wash",
+        "canonical": "#FDF1DC",
+        "oklch": "oklch(96.2% 0.031 81.8)",
+        "tonalRamp": [
+          "oklch(15% 0.031 81.8)",
+          "oklch(26% 0.031 81.8)",
+          "oklch(37% 0.031 81.8)",
+          "oklch(48% 0.031 81.8)",
+          "oklch(59% 0.031 81.8)",
+          "oklch(70% 0.031 81.8)",
+          "oklch(82% 0.031 81.8)",
+          "oklch(95% 0.031 81.8)"
+        ]
+      },
+      "done": {
+        "role": "tertiary",
+        "displayName": "Sky Done",
+        "canonical": "#286F9A",
+        "oklch": "oklch(51.8% 0.097 239.4)",
+        "tonalRamp": [
+          "oklch(15% 0.060 239.4)",
+          "oklch(26% 0.097 239.4)",
+          "oklch(37% 0.097 239.4)",
+          "oklch(48% 0.097 239.4)",
+          "oklch(59% 0.097 239.4)",
+          "oklch(70% 0.097 239.4)",
+          "oklch(82% 0.097 239.4)",
+          "oklch(95% 0.060 239.4)"
+        ]
+      },
+      "done-ink": {
+        "role": "tertiary",
+        "displayName": "Deep Sky Ink",
+        "canonical": "#18587E",
+        "oklch": "oklch(44.0% 0.088 240.0)",
+        "tonalRamp": [
+          "oklch(15% 0.060 240.0)",
+          "oklch(26% 0.088 240.0)",
+          "oklch(37% 0.088 240.0)",
+          "oklch(48% 0.088 240.0)",
+          "oklch(59% 0.088 240.0)",
+          "oklch(70% 0.088 240.0)",
+          "oklch(82% 0.088 240.0)",
+          "oklch(95% 0.060 240.0)"
+        ]
+      },
+      "done-wash": {
+        "role": "tertiary",
+        "displayName": "Sky Wash",
+        "canonical": "#E1F0F8",
+        "oklch": "oklch(94.6% 0.019 230.7)",
+        "tonalRamp": [
+          "oklch(15% 0.019 230.7)",
+          "oklch(26% 0.019 230.7)",
+          "oklch(37% 0.019 230.7)",
+          "oklch(48% 0.019 230.7)",
+          "oklch(59% 0.019 230.7)",
+          "oklch(70% 0.019 230.7)",
+          "oklch(82% 0.019 230.7)",
+          "oklch(95% 0.019 230.7)"
+        ]
+      },
+      "sky-on-dark": {
+        "role": "tertiary",
+        "displayName": "Sky on Night",
+        "canonical": "#7CC3E8",
+        "oklch": "oklch(78.4% 0.089 232.2)",
+        "tonalRamp": [
+          "oklch(15% 0.060 232.2)",
+          "oklch(26% 0.089 232.2)",
+          "oklch(37% 0.089 232.2)",
+          "oklch(48% 0.089 232.2)",
+          "oklch(59% 0.089 232.2)",
+          "oklch(70% 0.089 232.2)",
+          "oklch(82% 0.089 232.2)",
+          "oklch(95% 0.060 232.2)"
+        ]
+      },
+      "school": {
+        "role": "tertiary",
+        "displayName": "School Mist",
+        "canonical": "#E3EBF0",
+        "oklch": "oklch(93.5% 0.011 234.8)",
+        "tonalRamp": [
+          "oklch(15% 0.011 234.8)",
+          "oklch(26% 0.011 234.8)",
+          "oklch(37% 0.011 234.8)",
+          "oklch(48% 0.011 234.8)",
+          "oklch(59% 0.011 234.8)",
+          "oklch(70% 0.011 234.8)",
+          "oklch(82% 0.011 234.8)",
+          "oklch(95% 0.011 234.8)"
+        ]
+      },
+      "school-ink": {
+        "role": "tertiary",
+        "displayName": "School Ink",
+        "canonical": "#1F4458",
+        "oklch": "oklch(36.9% 0.055 234.6)",
+        "tonalRamp": [
+          "oklch(15% 0.055 234.6)",
+          "oklch(26% 0.055 234.6)",
+          "oklch(37% 0.055 234.6)",
+          "oklch(48% 0.055 234.6)",
+          "oklch(59% 0.055 234.6)",
+          "oklch(70% 0.055 234.6)",
+          "oklch(82% 0.055 234.6)",
+          "oklch(95% 0.055 234.6)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "hand-greeting": {
+        "displayName": "Hand Greeting",
+        "purpose": "Adriana's handwritten greeting; page h1 on dashboards."
+      },
+      "hand-aside": {
+        "displayName": "Hand Aside",
+        "purpose": "Short asides in Adriana's voice (5 words max) and her signature (1.9rem)."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Lesson title on lesson pages."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings and month title."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card and cycle titles."
+      },
+      "title-italic": {
+        "displayName": "Title Italic",
+        "purpose": "Cycle name paired with a lesson title."
+      },
+      "day-numeral": {
+        "displayName": "Day Numeral",
+        "purpose": "Date numbers in the month strip."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All running text."
+      },
+      "ui-strong": {
+        "displayName": "UI Strong",
+        "purpose": "Buttons and emphasised rows."
+      },
+      "data-id": {
+        "displayName": "Data ID",
+        "purpose": "Zoom IDs and passcodes, never below 16px."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "The only tracked-uppercase style; 12px floor."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-rest",
+        "value": "0 1px 2px rgb(26 58 76 / .06), 0 8px 24px rgb(26 58 76 / .07)",
+        "purpose": "Every card-level surface."
+      },
+      {
+        "name": "tabbar-edge",
+        "value": "0 -6px 20px rgb(26 58 76 / .08)",
+        "purpose": "Mobile bottom tab bar."
+      },
+      {
+        "name": "floating",
+        "value": "0 18px 48px rgb(26 58 76 / .28)",
+        "purpose": "Floating panels."
+      },
+      {
+        "name": "toast",
+        "value": "0 10px 30px rgb(26 58 76 / .22)",
+        "purpose": "Transient confirmations."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 3px solid #ED9615; outline-offset: 2px",
+        "purpose": "Focus on every control."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Progress fills (.5s) and toast entrance (.3s)."
+      },
+      {
+        "name": "live-pulse",
+        "value": "pulse 1.6–1.8s ease-in-out infinite; 0 0 0 0 → 0 0 0 6px rgb(201 80 42 / .55 → 0)",
+        "purpose": "Only on something live right now."
+      },
+      {
+        "name": "drawer-chevron",
+        "value": "transform .25s",
+        "purpose": "Benefits drawer chevron."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation:none; transition:none; scroll-behavior:auto",
+        "purpose": "Under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "520px"
+      },
+      {
+        "name": "tablet",
+        "value": "900px",
+        "purpose": "Rail → top bar + bottom tab bar; single column."
+      },
+      {
+        "name": "lesson-split",
+        "value": "1100px",
+        "purpose": "Lesson side column collapses."
+      }
+    ],
+    "rail": {
+      "width": "248px"
+    },
+    "mainMaxWidth": "1240px"
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single terracotta action of a view: Continuar, Unirme por Zoom, Ver.",
+      "html": "<button class=\"ds-btn-primary\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\"><path d=\"M7 4.5v15l13-7.5Z\"/></svg>Continuar</button>",
+      "css": ".ds-btn-primary{appearance:none;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 24px;border-radius:999px;font:700 16px/1 Karla,'Segoe UI',system-ui,sans-serif;background:#C9502A;color:#fff;transition:background .2s}.ds-btn-primary:hover{background:#A8401F}.ds-btn-primary:focus-visible{outline:3px solid #ED9615;outline-offset:2px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary actions: Volver a ver, Ir a Ave Mujer, anterior/siguiente.",
+      "html": "<button class=\"ds-btn-ghost\">Volver a ver</button>",
+      "css": ".ds-btn-ghost{appearance:none;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:10px 18px;border-radius:999px;font:700 15px/1 Karla,'Segoe UI',system-ui,sans-serif;background:transparent;color:#1A3A4C;box-shadow:inset 0 0 0 1.5px #EBDCD2;transition:background .2s}.ds-btn-ghost:hover{background:#F3E4DA}.ds-btn-ghost:focus-visible{outline:3px solid #ED9615;outline-offset:2px}"
+    },
+    {
+      "name": "Rail Navigation",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "Sticky night-blue sidebar; active item becomes a white chip with a terracotta icon.",
+      "html": "<nav class=\"ds-rail\"><a href=\"#\" class=\"ds-nav is-active\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\"><path d=\"m3 10 9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z\"/></svg>Inicio</a><a href=\"#\" class=\"ds-nav\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"6\" width=\"14\" height=\"12\" rx=\"2\"/><path d=\"m22 8-6 4 6 4V8Z\"/></svg>Encuentros grabados</a></nav>",
+      "css": ".ds-rail{background:#1A3A4C;padding:18px;display:flex;flex-direction:column;gap:2px;width:248px}.ds-nav{display:flex;align-items:center;gap:12px;min-height:44px;padding:10px 12px;border-radius:12px;color:#DDEEF1;text-decoration:none;font:500 16px/1.3 Karla,'Segoe UI',system-ui,sans-serif}.ds-nav:hover{background:#24495E}.ds-nav.is-active{background:#fff;color:#1A3A4C}.ds-nav.is-active svg{color:#C9502A}.ds-nav:focus-visible{outline:3px solid #ED9615;outline-offset:2px}"
+    },
+    {
+      "name": "Event Pills",
+      "kind": "chip",
+      "refersTo": "pill-live",
+      "description": "Events on a day of the month strip: live (terracotta), recording (sky), school (mist).",
+      "html": "<div class=\"ds-pills\"><span class=\"ds-pill ds-pill-live\">Vivo 19 hs</span><span class=\"ds-pill ds-pill-rec\">Consulta</span><span class=\"ds-pill ds-pill-school\">Escuela</span></div>",
+      "css": ".ds-pills{display:flex;gap:6px;flex-wrap:wrap}.ds-pill{font:700 12px/1.25 Karla,'Segoe UI',system-ui,sans-serif;padding:4px 8px;border-radius:10px}.ds-pill-live{background:#C9502A;color:#fff}.ds-pill-rec{background:#E1F0F8;color:#18587E}.ds-pill-school{background:#E3EBF0;color:#1F4458}"
+    },
+    {
+      "name": "Month Strip Day",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Signature: a day column with tracked day name, serif numeral, amber ring for today.",
+      "html": "<div class=\"ds-strip\"><button class=\"ds-day\"><span class=\"ds-dname\">Lun</span><span class=\"ds-dnum\">5</span></button><button class=\"ds-day is-today\"><span class=\"ds-dname\">Mar</span><span class=\"ds-dnum\">6</span><span class=\"ds-pill-live\">Vivo 19 hs</span></button><button class=\"ds-day\"><span class=\"ds-dname\">Mié</span><span class=\"ds-dnum\">7</span></button></div>",
+      "css": ".ds-strip{display:grid;grid-template-columns:repeat(3,108px);background:#fff;border-radius:18px;box-shadow:0 1px 2px rgb(26 58 76 / .06),0 8px 24px rgb(26 58 76 / .07);padding:12px 0}.ds-day{appearance:none;border:0;border-left:1px solid #EBDCD2;background:transparent;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:6px;padding:10px 8px 12px;min-height:116px}.ds-day:hover{background:#F3E4DA}.ds-day:focus-visible{outline:3px solid #ED9615;outline-offset:2px}.ds-dname{font:700 12px/1 Karla,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#3D6B85}.ds-dnum{font:600 26px/1 'Cormorant Garamond',Georgia,serif;color:#1A3A4C;width:40px;height:40px;display:grid;place-items:center;border-radius:50%;margin-left:-6px}.ds-day.is-today .ds-dnum{box-shadow:inset 0 0 0 3px #ED9615}.ds-day.is-today .ds-dname{color:#A8401F}.ds-pill-live{font:700 12px/1.25 Karla,sans-serif;padding:4px 8px;border-radius:10px;background:#C9502A;color:#fff}"
+    },
+    {
+      "name": "Continuar Card",
+      "kind": "card",
+      "refersTo": "card-continue",
+      "description": "Night card under the strip: lesson, cycle, sky progress, one terracotta action.",
+      "html": "<article class=\"ds-continue\"><h3>#3 · Yo vs Otro</h3><p class=\"ds-cyc\">Hacia dónde va la Humanidad</p><div class=\"ds-bar\"><i style=\"width:50%\"></i></div><p class=\"ds-meta\">2 de 4 encuentros vistos</p><button class=\"ds-go\">Continuar</button></article>",
+      "css": ".ds-continue{background:#1A3A4C;color:#DDEEF1;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px;max-width:420px;box-shadow:0 1px 2px rgb(26 58 76 / .06),0 8px 24px rgb(26 58 76 / .07)}.ds-continue h3{margin:0;font:600 2rem/1.1 'Cormorant Garamond',Georgia,serif;color:#fff}.ds-cyc{margin:-6px 0 0;font:italic 500 1.15rem/1.3 'Cormorant Garamond',Georgia,serif;color:#F2C58A}.ds-bar{height:8px;border-radius:999px;background:rgb(255 255 255 / .16);overflow:hidden}.ds-bar i{display:block;height:100%;background:#7CC3E8;border-radius:inherit}.ds-meta{margin:0;font:400 14px/1.4 Karla,sans-serif}.ds-go{align-self:flex-start;appearance:none;border:0;cursor:pointer;min-height:48px;padding:12px 24px;border-radius:999px;font:700 16px/1 Karla,sans-serif;background:#C9502A;color:#fff}.ds-go:hover{background:#A8401F}.ds-go:focus-visible{outline:3px solid #ED9615;outline-offset:2px}"
+    },
+    {
+      "name": "Zoom ID Block",
+      "kind": "custom",
+      "refersTo": "zoom-id",
+      "description": "Meeting ID and passcode at 18px tabular with a 44px copy button.",
+      "html": "<dl class=\"ds-zoom\"><dt>ID de reunión</dt><dd>123 4567 8910</dd><button class=\"ds-copy\">Copiar</button><dt>Código</dt><dd>ejemplo</dd><button class=\"ds-copy\">Copiar</button></dl>",
+      "css": ".ds-zoom{display:grid;grid-template-columns:auto 1fr auto;gap:6px 14px;align-items:center;background:#FBF6F2;border-radius:12px;padding:12px 14px;margin:0;color:#1A3A4C}.ds-zoom dt{font:400 14px/1.3 Karla,sans-serif;color:#3D6B85}.ds-zoom dd{margin:0;font:700 18px/1.2 Karla,sans-serif;letter-spacing:.02em;font-variant-numeric:tabular-nums}.ds-copy{appearance:none;border:0;background:transparent;color:#A8401F;font:700 14px/1 Karla,sans-serif;min-height:44px;padding:0 6px;cursor:pointer}.ds-copy:hover{text-decoration:underline}.ds-copy:focus-visible{outline:3px solid #ED9615;outline-offset:2px}"
+    },
+    {
+      "name": "Lesson Row",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Seen / next / unseen lesson ticks with a Caveat aside on the next lesson.",
+      "html": "<ul class=\"ds-lessons\"><li class=\"ds-lesson is-done\"><span class=\"ds-tick\">✓</span>#2 · Apego vs Individuación</li><li class=\"ds-lesson is-next\"><span class=\"ds-tick\">▶</span>#3 · Yo vs Otro<span class=\"ds-aside\">Seguí acá</span></li><li class=\"ds-lesson\"><span class=\"ds-tick\"></span>#4 · Potencia vs Dominación</li></ul>",
+      "css": ".ds-lessons{list-style:none;margin:0;padding:8px;background:#fff;border-radius:18px;max-width:440px}.ds-lesson{display:flex;align-items:center;gap:12px;min-height:48px;padding:8px 12px;border-radius:12px;font:500 16px/1.3 Karla,sans-serif;color:#1A3A4C}.ds-lesson:hover{background:#FBF6F2}.ds-tick{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;box-shadow:inset 0 0 0 2px #EBDCD2;font-size:12px;color:transparent;flex:none}.ds-lesson.is-done{color:#3D6B85}.ds-lesson.is-done .ds-tick{background:#2E7FAE;box-shadow:none;color:#fff}.ds-lesson.is-next .ds-tick{box-shadow:inset 0 0 0 2px #C9502A;color:#C9502A}.ds-aside{margin-left:auto;font:600 1.25rem/1 Caveat,'Segoe Script',cursive;color:#A8401F}"
+    },
+    {
+      "name": "Mobile Tab Bar",
+      "kind": "nav",
+      "refersTo": "tab-item-active",
+      "description": "Fixed white bottom bar on mobile; active tab terracotta wash.",
+      "html": "<nav class=\"ds-tabbar\"><a href=\"#\" class=\"ds-tab is-active\">Inicio</a><a href=\"#\" class=\"ds-tab\">Recorrido</a><a href=\"#\" class=\"ds-tab\">Encuentros</a></nav>",
+      "css": ".ds-tabbar{display:flex;background:#fff;border-top:1px solid #EBDCD2;padding:6px;box-shadow:0 -6px 20px rgb(26 58 76 / .08);max-width:390px}.ds-tab{flex:1;display:flex;align-items:center;justify-content:center;min-height:52px;text-decoration:none;color:#3D6B85;font:700 12px/1 Karla,sans-serif;border-radius:12px}.ds-tab.is-active{color:#A8401F;background:#FBEDE4}.ds-tab:focus-visible{outline:3px solid #ED9615;outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Ritmo del mes",
+    "overview": "The members' desk is organised by the rhythm of the month, not by type of content. A horizontal month strip is the spine of every dashboard: days are columns, events are small pills on their day, today is ringed in amber, and past days that have recordings show a play mark. Right under the strip sits the one thing a member came to do: continue where she left off. Everything below (cycles with real progress, the recordings archive, library, the day's practices, community) is reference material read at a calm pace.\n\nThe world is warm and quiet. A night-blue rail holds navigation. The working column sits on an ivory-blush ground tinted from terracotta. Surfaces are flat white cards with a soft, low shadow, and hairline rules divide content inside them. Colour has a job: terracotta means \"live / now / do this\", amber means \"today\", sky blue means \"done / progress\". A serif display (Cormorant Garamond) carries headings and dates. Karla carries all UI. Caveat appears only where Adriana writes by hand: the greeting, her signature and a few short asides. The voice is always Adriana's own, in the first person.\n\n**Scope.** This document covers only the **Ave Mujer sub-brand** used in the members area: the Mastermind and Membresía Ave Mujer dashboards (`/escritorio-mastermind`, `/escritorio-membresia`) and the LearnDash lesson pages they open. The public marketing site of Hay un Día uses a different turquoise identity (Raleway / Open Sans) that is **not part of this world and is not documented here**. Do not take tokens from this file into marketing pages, and do not bring marketing tokens into the members area. The implementation target is the BuddyBoss child theme's global CSS; the reference build is `prototipos/escritorio-mastermind/index.html`.",
+    "keyCharacteristics": [
+      "The month strip is the spine; \"Continuar\" sits directly under it.",
+      "A sticky night-blue rail on desktop becomes a night-blue top bar plus a fixed white bottom tab bar on mobile.",
+      "Colour is used for meaning: terracotta = live/now + primary action, amber = today, sky = done.",
+      "Flat white cards, hairline dividers and one soft shadow. No gradients, no KPI tiles.",
+      "Serif for headings and dates, Karla for UI, Caveat only for Adriana's handwriting.",
+      "Large, calm targets (44px minimum) and legible data (Zoom IDs at 18px with a copy button)."
+    ],
+    "rules": [
+      {
+        "name": "The Live Is Terracotta Rule",
+        "body": "Terracotta (`terra`) appears only on something live, happening now, or the single primary action of the view. If two terracotta buttons compete in one card, one of them is wrong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Amber Is Today Rule",
+        "body": "Amber marks \"today\" and \"ahora\" and nothing else, apart from the focus ring. It is never used for decoration, for brand accents or for warnings.",
+        "section": "colors"
+      },
+      {
+        "name": "The Done Is Sky Rule",
+        "body": "Progress and completion are always sky blue. A seen lesson is never terracotta or amber.",
+        "section": "colors"
+      },
+      {
+        "name": "The Twelve-Pixel Floor Rule",
+        "body": "Tracked uppercase never goes below 12px, and no text in the members area goes below 12px at all.",
+        "section": "typography"
+      },
+      {
+        "name": "The Adriana's Hand Rule",
+        "body": "Caveat is used only for the greeting, Adriana's signature and short handwritten asides (five words or fewer). Never for headings, buttons, navigation, data or anything a member must read to operate the page.",
+        "section": "typography"
+      },
+      {
+        "name": "The Readable ID Rule",
+        "body": "Meeting IDs and passcodes are set at 16px or larger (18px in the build), in tabular numerals, always next to a \"Copiar\" button with a 44px target.",
+        "section": "typography"
+      },
+      {
+        "name": "The Spine First Rule",
+        "body": "On every dashboard the month strip comes first and \"Continuar\" sits directly under it, on every breakpoint. Don't put KPI tiles, banners or promotions above them.",
+        "section": "layout"
+      },
+      {
+        "name": "The One Lift Rule",
+        "body": "A card is either on the ground with the card-rest shadow or inset in tone inside another card. Never shadow a card inside a card.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** open every members dashboard with the greeting, then the month strip, then \"Continuar\" and \"Hoy\" side by side (stacked on mobile).",
+      "**Do** keep terracotta (`terra`) for live/now and the single primary action. Use `terra-deep` whenever terracotta has to be text.",
+      "**Do** mark today with the amber ring and \"ahora\" with amber, and nothing else with amber except the focus ring.",
+      "**Do** show progress and completion in sky blue only, with real counts (\"2 de 4 encuentros vistos\").",
+      "**Do** set Zoom IDs and passcodes at 16px or larger (18px in the build), tabular, each with a 44px \"Copiar\" button.",
+      "**Do** keep every tap target at least 44px (tabs 52px, primary buttons 48px) and every text/ground pair at WCAG AA or better.",
+      "**Do** keep tracked uppercase at 12px or larger, Karla 700, +0.08em, and only for day names, table headers and the brand sub-line.",
+      "**Do** write in Adriana's first person (\"Te doy la bienvenida…\") and let Caveat carry only her greeting, signature and short asides.",
+      "**Do** use flat white cards with the single card-rest shadow, hairline dividers inside, and `surface-2` insets for nested blocks."
+    ],
+    "donts": [
+      "**Don't** use this palette or these fonts on the public marketing site, and don't bring the marketing site's turquoise identity into the members area. They are separate worlds.",
+      "**Don't** put a KPI-tile header or a grid of equal gradient cards at the top of a dashboard.",
+      "**Don't** put eyebrow labels or kickers above headings.",
+      "**Don't** use Caveat for headings, buttons, navigation, data or anything longer than a short aside.",
+      "**Don't** colour a seen lesson or a finished cycle terracotta or amber.",
+      "**Don't** nest a shadowed card inside another card.",
+      "**Don't** go lighter than `ink-3` for any text; it is the lightest text tone that still passes AA.",
+      "**Don't** show stale dates or hand-patched \"today\" text. \"Hoy\" and the strip are always computed from the real date and the real event data."
+    ]
+  }
+}
