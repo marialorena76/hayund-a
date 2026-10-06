@@ -220,17 +220,17 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 /* community */
 .empty{border:2px dashed var(--line);border-radius:var(--r-lg);padding:24px;display:flex;gap:16px;align-items:flex-start;color:var(--ink-2)}
 .empty strong{color:var(--ink);display:block;margin-bottom:4px}
-details.benefits{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow)}
-details.benefits summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;min-height:56px}
-details.benefits summary::-webkit-details-marker{display:none}
-details.benefits summary h3{font-size:1.4rem}
-details.benefits summary .chev{transition:transform .25s}
-details.benefits[open] summary .chev{transform:rotate(180deg)}
-.benefit-list{list-style:none;margin:0;padding:0 24px 20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
-.benefit-list li{display:flex;flex-direction:column;gap:4px;padding:14px 0;border-top:1px solid var(--line)}
-.benefit-list .off{font-weight:700;color:var(--terra-deep);font-size:14px}
-.benefit-list .bt{font:600 1.15rem/1.2 var(--f-display)}
-.benefit-list .bd{color:var(--ink-2);font-size:15px}
+.offers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
+.offers-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.offers-head .muted{font-size:14px}
+.offer-list{list-style:none;margin:0;padding:0}
+.offer{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0;border-top:1px solid var(--line)}
+.offer-txt{display:flex;flex-direction:column;gap:6px;min-width:0}
+.offer h4{margin:0;font:600 1.25rem/1.15 var(--f-display);color:var(--ink);text-wrap:balance}
+.offer p{font-size:15px;color:var(--ink-2)}
+.offer .price{display:flex;gap:10px;align-items:center;flex-wrap:wrap;color:var(--ink);font-weight:700;font-size:15px}
+.mtag{background:var(--school);color:var(--school-ink);font-size:13px;padding:3px 9px;border-radius:999px}
+.more{display:inline-flex;align-items:center;gap:6px;font-weight:700;min-height:44px;padding-top:8px;border-top:1px solid var(--line)}
 .ave{flex-direction:row;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:var(--blush)}
 .ave p{max-width:60ch;color:var(--ink)}
 
@@ -288,7 +288,9 @@ body.in-lesson .lesson-view{display:flex}
   .topbar .brand{padding:0}
   .topbar .brand .name{font-size:24px}
   .main{padding:20px 16px 120px;gap:44px}
-  .hero,.cycles,.split,.benefit-list{grid-template-columns:minmax(0,1fr)}
+  .hero,.cycles,.split,.offers{grid-template-columns:minmax(0,1fr)}
+  .offer{flex-direction:column;align-items:stretch}
+  .offer .btn{width:100%}
   .tools{grid-template-columns:minmax(0,1fr);padding:8px 12px}
   .tools::before{left:39px;right:auto;top:28px;bottom:28px;width:2px;height:auto}
   .tool{flex-direction:row;text-align:left;align-items:center;gap:14px;padding:10px 4px;flex-wrap:wrap}
@@ -348,6 +350,7 @@ body.in-lesson .lesson-view{display:flex}
     <nav class="nav" id="railnav">
       <a href="#inicio" data-nav="inicio" aria-current="true"><svg class="i"><use href="#i-home"/></svg>Inicio</a>
       <a href="#recorrido" data-nav="recorrido"><svg class="i"><use href="#i-path"/></svg>Mi recorrido</a>
+      <a href="#escuela" data-nav="escuela"><svg class="i"><use href="#i-gift"/></svg>Escuela este mes</a>
       <a href="#encuentros" data-nav="encuentros"><svg class="i"><use href="#i-video"/></svg>Encuentros grabados</a>
       <a href="#biblioteca" data-nav="biblioteca"><svg class="i"><use href="#i-book"/></svg>Biblioteca</a>
       <a href="#herramientas" data-nav="herramientas"><svg class="i"><use href="#i-drop"/></svg>Herramientas</a>
@@ -403,6 +406,22 @@ body.in-lesson .lesson-view{display:flex}
           <div class="cycles" id="cycles"></div>
         </section>
 
+        <section class="section" id="escuela" aria-labelledby="esc-title">
+          <div class="section-head"><h2 id="esc-title">Escuela Hay un Día este mes</h2><p>Todo lo que podés hacer en octubre, con tu precio de miembro.</p></div>
+          <div class="offers">
+            <article class="card" aria-labelledby="pos-title">
+              <div class="offers-head"><h3 id="pos-title">Posgrados</h3><span class="muted">Para facilitadoras del método</span></div>
+              <ul class="offer-list" id="offers-posgrados"></ul>
+              <a class="more" href="https://hayundia.com.ar/agenda/" target="_blank" rel="noopener">Ver todos los posgrados y protocolos grabados<svg class="i"><use href="#i-right"/></svg></a>
+            </article>
+            <article class="card" aria-labelledby="cur-title">
+              <div class="offers-head"><h3 id="cur-title">Cursos</h3><span class="muted">Formaciones con inscripción abierta</span></div>
+              <ul class="offer-list" id="offers-cursos"></ul>
+              <a class="more" href="https://hayundia.com.ar/escuela/" target="_blank" rel="noopener">Ver todos los cursos<svg class="i"><use href="#i-right"/></svg></a>
+            </article>
+          </div>
+        </section>
+
         <section class="section" id="encuentros" aria-labelledby="enc-title">
           <div class="section-head"><h2 id="enc-title">Encuentros grabados</h2><p class="rec-note"><svg class="i"><use href="#i-clock"/></svg>Cada grabación aparece sola acá dentro de las 24 hs.</p></div>
           <table class="rec-table">
@@ -438,10 +457,6 @@ body.in-lesson .lesson-view{display:flex}
             </div>
             <a class="btn ghost small" href="#" data-soon="Lleva al escritorio de la Membresía Ave Mujer.">Ir a Ave Mujer</a>
           </div>
-          <details class="benefits" id="benefits">
-            <summary><h3>Beneficios de la comunidad</h3><span class="muted" style="display:flex;align-items:center;gap:8px"><span id="benefitCount" style="white-space:nowrap"></span><svg class="i chev"><use href="#i-down"/></svg></span></summary>
-            <ul class="benefit-list" id="benefitList"></ul>
-          </details>
         </section>
 
         <footer class="sign">
@@ -459,7 +474,7 @@ body.in-lesson .lesson-view{display:flex}
   <a href="#inicio" data-nav="inicio" aria-current="true"><svg class="i"><use href="#i-home"/></svg>Inicio</a>
   <a href="#recorrido" data-nav="recorrido"><svg class="i"><use href="#i-path"/></svg>Recorrido</a>
   <a href="#encuentros" data-nav="encuentros"><svg class="i"><use href="#i-video"/></svg>Encuentros</a>
-  <a href="#herramientas" data-nav="herramientas"><svg class="i"><use href="#i-drop"/></svg>Prácticas</a>
+  <a href="#escuela" data-nav="escuela"><svg class="i"><use href="#i-gift"/></svg>Escuela</a>
   <a href="#biblioteca" data-nav="biblioteca"><svg class="i"><use href="#i-book"/></svg>Biblioteca</a>
 </nav>
 
@@ -509,25 +524,33 @@ var TOOLS=[
   {w:"durante el día",t:"Agua vibrada",i:"i-drop",u:"https://youtube.com/shorts/4hSo-_4gJMg",from:15,to:21},
   {w:"noche",t:"Antes de ir a dormir",i:"i-moon",u:"https://youtube.com/shorts/39E9Q-oRVsg",from:21,to:29}
 ];
-var BENEFITS=[
-  {off:"−20% para miembros",t:"Sanar con la Inteligencia de las Células",d:"Inicia el martes 13 de octubre. Miembros: $72.000 ARS por transferencia.",until:"2026-10-13"},
-  {off:"Precio MasterMind",t:"Seminario de Órganos y Funciones · Método Goncalves",d:"Próximo módulo: sábado 24 de octubre. Regular $45.000, MasterMind $40.000 ARS por módulo.",until:"2026-10-24"},
-  {off:"−10% para miembros",t:"Posgrados",d:"Todos los cuartos sábados de cada mes. Miembros: $40.000 ARS por módulo.",until:"2099-01-01"},
-  {off:"−10% para miembros",t:"Flores Silvestres de América · Profesorado",d:"Inicia todos los meses. Miembros: $45.000 ARS.",until:"2099-01-01"},
-  {off:"Precio MasterMind",t:"¿Quién soy yo para él, ella, eso o aquello?",d:"Inició en septiembre de 2026.",until:"2026-09-30"}
-];
-/* Agenda: real dates; the next MasterMind encounter (13/10) is an example date */
+var OFFERS={
+  posgrados:[
+    {t:"Seminario de Órganos y Funciones · Método Goncalves",when:"2° módulo: memoria de boca y dientes. Clase vivencial el sábado 17 de octubre, de 11:30 a 13:30 hs.",extra:"Si recién te sumás, el módulo 1 está grabado.",price:"$45.000 ARS o US$45 por módulo",member:"−10% miembros",u:"https://hayundia.com.ar/producto/seminario-de-organos-y-funciones-metodo-goncalves/"},
+    {t:"Archivos lumínicos en el cerebro",when:"Clase vivencial el sábado 17 de octubre, de 9 a 11 hs.",price:"$45.000 ARS o US$45 por módulo",member:"−10% miembros",ask:true},
+    {t:"¿Quién soy yo para él, ella, eso o aquello?",when:"Posgrado de mi autoría. Consultame por la próxima fecha.",price:"$45.000 ARS",member:"Consultá tu precio MasterMind",u:"https://hayundia.com.ar/producto/quien-soy-yo-para-el-ella-eso-o-aquello/"}
+  ],
+  cursos:[
+    {t:"Sanar con la Inteligencia de las Células",when:"5ª edición. Inicia el martes 13 de octubre. Inscripción abierta.",price:"$90.000 ARS",member:"−20% miembros",u:"https://hayundia.com.ar/producto/sanar-con-la-inteligencia-de-tus-celulas/"},
+    {t:"Curso de Memoria Celular · Método Goncalves",when:"Nuevo inicio. Mensual (10 meses) o intensivo (5 meses): una parte online y otra en vivo.",price:"Mensual $80.000 ARS por mes",u:"https://hayundia.com.ar/producto/curso-memoria-celular-cohorte-octubre-2026/"},
+    {t:"Flores Silvestres de América",when:"Curso básico y profesorado. A tu tiempo, con clases online y consultas en vivo.",price:"$50.000 ARS",member:"−10% miembros",u:"https://hayundia.com.ar/producto/flores-silvestres-de-america-curso-basico-de-terapeuta-floral/"}
+  ]
+};
+/* Agenda de octubre: fechas reales de la agenda de Adriana. Los datos de Zoom son de ejemplo. */
 function events(){
-  return [
+  var ev=[
     {date:"2026-09-29",kind:"rec",short:"Rosácea",title:"2° Encuentro · Protocolo Rosácea",time:"19 hs",rec:"r2"},
-    {date:"2026-09-26",kind:"school",short:"Seminario",title:"Seminario de Órganos y Funciones · módulo 1",time:"4to sábado"},
-    {date:"2026-10-02",kind:"rec",short:"Consulta",title:"Clase de consulta · asesoría grupal",time:"19 a 20 hs",rec:"r1"},
-    {date:"2026-10-06",kind:"live",short:"Vivo 19 hs",title:"Encuentro en vivo · Membresía Ave Mujer",note:"Abierto también al MasterMind.",start:19,end:20.5,zoom:{id:"123 4567 8910",code:"ejemplo"}},
-    {date:"2026-10-13",kind:"live",short:"MasterMind",title:"3° Encuentro MasterMind",note:"Fecha de ejemplo para el prototipo.",start:19,end:20.5,zoom:{id:"987 6543 2100",code:"ejemplo"}},
-    {date:"2026-10-13",kind:"school",short:"Inicia SIC",title:"Inicia Sanar con la Inteligencia de las Células",note:"−20% para miembros."},
-    {date:"2026-10-16",kind:"school",short:"Taller",title:"Taller · Habito mi Femenino para Crear",note:"Taller en vivo con inscripción aparte."},
-    {date:"2026-10-24",kind:"school",short:"Posgrado",title:"Seminario de Órganos y Funciones · módulo 2",time:"4to sábado",note:"Precio MasterMind: $40.000 ARS."}
+    {date:"2026-10-02",kind:"rec",short:"Asesoría",title:"Clase general de asesoramiento gratuito",time:"19 hs · quedó grabada en el aula",rec:"r1"},
+    {date:"2026-10-06",kind:"live",short:"Vivo 19 hs",title:"Encuentro con el ciclo “Un humano para la nueva humanidad”",note:"Para quienes hacen el ciclo Hacia dónde va la Humanidad.",start:19,end:20.5,zoom:{id:"123 4567 8910",code:"ejemplo"}},
+    {date:"2026-10-11",kind:"school",short:"Feria",title:"Feria holística · charla y stand",note:"Tardeo, patio gastronómico, Casilda (Santa Fe)."},
+    {date:"2026-10-13",kind:"school",short:"Inicia SIC",title:"Inicia Sanar con la Inteligencia de las Células · 5ª edición",note:"−20% para miembros.",jump:"escuela"},
+    {date:"2026-10-15",kind:"school",short:"Tu foto",title:"Último día para enviarme tu foto y tus datos",note:"Para la publicación de miembros de los ciclos de vivos."},
+    {date:"2026-10-16",kind:"live",short:"Taller 19 hs",title:"Taller · Habito mi Femenino para Crear",note:"Gratuito para miembros de la Membresía y el MasterMind.",start:19,end:21,zoom:{id:"123 4567 8910",code:"ejemplo"}},
+    {date:"2026-10-17",kind:"school",short:"Posgrados",title:"Posgrados · clases vivenciales",note:"9 a 11 hs Archivos lumínicos en el cerebro · 11:30 a 13:30 hs Seminario de Órganos y Funciones, 2° módulo.",jump:"escuela"},
+    {date:"2026-10-20",kind:"live",short:"Vivo 19 hs",title:"MasterMind · protocolo en vivo y consultas",note:"Reunión recurrente del MasterMind.",start:19,end:20.5,zoom:{id:"987 6543 2100",code:"ejemplo"}}
   ];
+  ["2026-10-01","2026-10-08","2026-10-15","2026-10-22","2026-10-29"].forEach(function(d){ev.push({date:d,kind:"school",short:"Radio 19 hs",title:"Hay un Día · radio",note:"Todos los jueves a las 19 hs por FM Mantra."});});
+  return ev;
 }
 
 /* ---------- demo states ---------- */
@@ -537,7 +560,7 @@ function zero(){var z={};for(var k in BASE){z[k]=BASE[k].map(function(){return 0
 var STATES=[
   {id:"hoy",label:"Hoy, con vivo a las 19 hs",hint:"Martes 6 de octubre, 16:40.",now:[2026,9,6,16,40],prog:function(){return clone(BASE);},last:["humanidad",2]},
   {id:"envivo",label:"El vivo está empezando",hint:"Martes 6 de octubre, 19:05.",now:[2026,9,6,19,5],prog:function(){return clone(BASE);},last:["humanidad",2]},
-  {id:"sinvivo",label:"Un día sin encuentro",hint:"Jueves 8 de octubre, 10:15.",now:[2026,9,8,10,15],prog:function(){return clone(BASE);},last:["humanidad",2]},
+  {id:"sinvivo",label:"Un día sin encuentro",hint:"Viernes 9 de octubre, 10:15.",now:[2026,9,9,10,15],prog:function(){return clone(BASE);},last:["humanidad",2]},
   {id:"primera",label:"Primer ingreso",hint:"Una miembra nueva, sin nada visto.",now:[2026,9,6,16,40],prog:zero,last:null},
   {id:"completo",label:"Terminó un ciclo",hint:"Acaba de ver el #4 de Humanidad.",now:[2026,9,6,21,30],prog:function(){var p=clone(BASE);p.humanidad=[1,1,1,1];return p;},last:["humanidad",3],justDone:"humanidad"}
 ];
@@ -654,7 +677,7 @@ function renderDay(){
       var seen=S.prog.enc[ri];
       return '<div class="event"><span class="status rec">'+icon(seen?"i-check":"i-play")+(seen?"Ya la viste":"Grabación disponible")+'</span><span class="t">'+esc(e.title)+'</span><span class="d">'+esc(e.time||"")+'</span><div class="actions"><button class="btn '+(seen?"ghost small":"primary")+'" type="button" data-open="enc:'+ri+'">'+icon("i-play")+(seen?"Volver a ver":"Ver la grabación")+'</button></div></div>';
     }
-    return '<div class="event"><span class="status school">Escuela Hay un Día</span><span class="t">'+esc(e.title)+'</span><span class="d">'+esc([e.time,e.note].filter(Boolean).join(" · "))+'</span></div>';
+    return '<div class="event"><span class="status school">Escuela Hay un Día</span><span class="t">'+esc(e.title)+'</span><span class="d">'+esc([e.time,e.note].filter(Boolean).join(" · "))+'</span>'+(e.jump?'<div class="actions"><button class="btn ghost small" type="button" data-jump="'+e.jump+'">Ver precios e inscripción</button></div>':"")+'</div>';
   }).join("");
   el.innerHTML=head+'<div class="event-list">'+body+'</div>';
 }
@@ -698,9 +721,14 @@ function renderStatic(){
     var isNow=h>=t.from&&h<t.to;
     return '<a class="tool'+(isNow?" now":"")+'" href="'+t.u+'" target="_blank" rel="noopener"><span class="ico">'+icon(t.i)+'</span><span class="txt"><span class="when">'+(isNow?"ahora · ":"")+esc(t.w)+'</span><strong>'+esc(t.t)+'</strong></span><span class="go">Ver '+icon("i-right")+'</span></a>';
   }).join("");
-  var today=iso(now()),vig=BENEFITS.filter(function(b){return b.until>=today;});
-  document.getElementById("benefitCount").textContent=vig.length+" vigentes";
-  document.getElementById("benefitList").innerHTML=vig.map(function(b){return '<li><span class="off">'+esc(b.off)+'</span><span class="bt">'+esc(b.t)+'</span><span class="bd">'+esc(b.d)+'</span></li>';}).join("");
+  ["posgrados","cursos"].forEach(function(k){
+    document.getElementById("offers-"+k).innerHTML=OFFERS[k].map(function(o){
+      var cta=o.ask?'<a class="btn ghost small" href="#" data-soon="Abre el WhatsApp de Adriana para inscribirte: +54 9 341 6 660 795">'+icon("i-chat")+'Consultar</a>'
+        :'<a class="btn primary small" href="'+o.u+'" target="_blank" rel="noopener">Inscribirme'+icon("i-right")+'</a>';
+      return '<li class="offer"><div class="offer-txt"><h4>'+esc(o.t)+'</h4><p>'+esc(o.when)+'</p>'+(o.extra?'<p class="muted">'+esc(o.extra)+'</p>':"")+
+        '<p class="price"><span class="num">'+esc(o.price)+'</span>'+(o.member?'<span class="mtag">'+esc(o.member)+'</span>':"")+'</p></div>'+cta+'</li>';
+    }).join("");
+  });
   document.getElementById("todayLine").textContent=cap(longDate(now()))+" · "+String(now().getHours()).padStart(2,"0")+":"+String(now().getMinutes()).padStart(2,"0")+" hs";
 }
 
@@ -769,7 +797,7 @@ document.getElementById("stripPrev").addEventListener("click",function(){var s=d
 document.getElementById("stripNext").addEventListener("click",function(){var s=document.getElementById("strip");s.scrollBy({left:s.clientWidth*0.7,behavior:"smooth"});});
 
 /* active nav while scrolling */
-var secs=["inicio","recorrido","encuentros","biblioteca","herramientas","comunidad"];
+var secs=["inicio","recorrido","escuela","encuentros","biblioteca","herramientas","comunidad"];
 if("IntersectionObserver" in window){
   var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){var id=en.target.id;document.querySelectorAll("[data-nav]").forEach(function(a){a.setAttribute("aria-current",String(a.getAttribute("data-nav")===id));});}});},{rootMargin:"-30% 0px -60% 0px"});
   secs.forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});
