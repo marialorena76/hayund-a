@@ -260,6 +260,7 @@ body.in-lesson .lesson-view{display:flex}
 .lv-side .lessons{padding:4px 0 0}
 
 /* demo panel */
+.proto-short{display:none}
 .proto{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
 .demo-toggle{min-height:36px;padding:6px 14px;font-size:14px;box-shadow:inset 0 0 0 1.5px #E2C79E}
 .demo{position:fixed;right:20px;top:56px;z-index:30;width:min(340px,calc(100vw - 32px));background:var(--surface);border-radius:var(--r-lg);box-shadow:0 18px 48px rgb(26 58 76 / .28);padding:20px;display:flex;flex-direction:column;gap:12px}
@@ -312,7 +313,7 @@ body.in-lesson .lesson-view{display:flex}
   .demo-toggle{min-height:44px}
   .toast{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 }
-@media (max-width:520px){.player .ph{display:none}.player .play{width:68px;height:68px}.player .ttl{font-size:1.1rem}.zoom{grid-template-columns:1fr auto}.zoom dt{grid-column:1/-1;margin-bottom:-4px}}
+@media (max-width:520px){.proto{flex-wrap:nowrap;justify-content:space-between;text-align:left;padding:6px 12px}.proto-long{display:none}.proto-short{display:inline}.demo-toggle .dl{display:none}.demo-toggle{width:44px;padding:0;flex:none}.player .ph{display:none}.player .play{width:68px;height:68px}.player .ttl{font-size:1.1rem}.zoom{grid-template-columns:1fr auto}.zoom dt{grid-column:1/-1;margin-bottom:-4px}}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -359,7 +360,7 @@ body.in-lesson .lesson-view{display:flex}
   </aside>
 
   <div style="min-width:0">
-    <div class="proto" role="note"><span><b>Prototipo para revisión.</b> El progreso, la alumna y los datos de Zoom son de ejemplo; los títulos de ciclos, grabaciones, biblioteca y prácticas son los reales.</span><button class="btn light demo-toggle" type="button" id="demoToggle" aria-expanded="false" aria-controls="demo"><svg class="i"><use href="#i-sliders"/></svg>Modo demo</button></div>
+    <div class="proto" role="note"><span><b>Prototipo para revisión.</b><span class="proto-long"> El progreso, la alumna y los datos de Zoom son de ejemplo; los títulos de ciclos, grabaciones, biblioteca y prácticas son los reales.</span><span class="proto-short"> Datos de ejemplo.</span></span><button class="btn light demo-toggle" type="button" id="demoToggle" aria-expanded="false" aria-controls="demo"><svg class="i"><use href="#i-sliders"/></svg><span class="dl">Modo demo</span><span class="sr">Modo demo</span></button></div>
     <header class="topbar">
       <div class="brand"><span class="name">Ave Mujer</span><span class="label sub">Mastermind</span></div>
       <span class="avatar" aria-label="Lucía Fernández">L</span>
