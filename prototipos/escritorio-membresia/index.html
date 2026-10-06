@@ -276,6 +276,50 @@ body.in-lesson .lesson-view{display:flex}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 
 .tabbar{display:none}
+/* Membresía variant: horizontal header + terracotta banner (MasterMind keeps the night-blue rail) */
+.shell{display:block;background:var(--ground)}
+.main{margin:0 auto}
+.mhead{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;padding:10px clamp(16px,3vw,48px);box-shadow:0 4px 18px rgb(26 58 76 / .05)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none;min-height:44px}
+.logo-slot{display:flex;align-items:center}
+.logo-slot img{height:56px;width:auto;display:block}
+.logo .wm{font:600 32px/1 var(--f-hand);color:var(--terra-deep)}
+.logo-sub{color:var(--ink-2)}
+.hnav{display:flex;gap:2px;flex-wrap:wrap;margin-left:8px}
+.hnav a{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;border-radius:999px;color:var(--ink-2);font-weight:700;font-size:15px;text-decoration:none}
+.hnav a:hover{background:var(--terra-wash);color:var(--terra-deep)}
+.hnav a[aria-current="true"]{background:var(--terra);color:#fff}
+.who{margin-left:auto;display:flex;align-items:center;gap:10px;flex:none}
+.who-txt{font-weight:700;font-size:15px;line-height:1.2}
+.who-txt small{display:block;font-weight:400;color:var(--ink-2);font-size:13px}
+.banner{background:var(--terra);color:#fff;border-radius:var(--r-lg);padding:clamp(24px,3vw,44px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:center;box-shadow:0 14px 34px rgb(168 64 31 / .22)}
+.banner .hello{gap:10px}
+.banner .hi{color:#FCE3D3;font-size:clamp(2.2rem,1.8rem + 1.4vw,3rem)}
+.banner .welcome{font-size:clamp(2rem,1.6rem + 1.6vw,3rem);color:#fff;line-height:1.05}
+.banner .today{color:#FCE3D3}
+.banner .hello p.msg{color:#fff;max-width:56ch}
+.banner .continue{background:var(--terra-deep);box-shadow:none;color:#fff}
+.banner .continue .cycle{color:#FCE3D3}
+.banner .continue .lede{color:#fff}
+.banner .bar{background:rgb(255 255 255 / .24)}
+.banner .bar i{background:#fff}
+.banner .btn.primary{background:#fff;color:var(--terra-deep)}
+.banner .btn.primary:hover{background:var(--terra-wash)}
+.banner .btn.light{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgb(255 255 255 / .6)}
+.daycard.wide .event-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.daycard.wide .event{border-top:0;padding-top:0}
+@media (max-width:1180px){.hnav a{padding:8px 10px;font-size:14px}.who-txt{display:none}}
+@media (max-width:900px){
+  .hnav{display:none}
+  .mhead{padding:8px 16px}
+  .logo-slot img{height:44px}
+  .logo .wm{font-size:28px}
+  .who-txt{display:none}
+  .banner{grid-template-columns:minmax(0,1fr);padding:22px 18px}
+  .banner .hello p.msg{display:none}
+  .banner .continue{padding:18px}
+}
+
 
 @media (max-width:1100px){
   .lv-grid{grid-template-columns:minmax(0,1fr)}
@@ -345,38 +389,37 @@ body.in-lesson .lesson-view{display:flex}
 </svg>
 
 <div class="shell">
-  <aside class="rail" aria-label="Navegación del escritorio">
-    <div class="brand"><span class="name">Ave Mujer</span><span class="label sub">Membresía</span></div>
-    <nav class="nav" id="railnav">
-      <a href="#inicio" data-nav="inicio" aria-current="true"><svg class="i"><use href="#i-home"/></svg>Inicio</a>
-      <a href="#recorrido" data-nav="recorrido"><svg class="i"><use href="#i-path"/></svg>Mi recorrido</a>
-      <a href="#escuela" data-nav="escuela"><svg class="i"><use href="#i-gift"/></svg>Para seguir tu camino</a>
-      <a href="#encuentros" data-nav="encuentros"><svg class="i"><use href="#i-video"/></svg>Encuentros grabados</a>
-      <a href="#biblioteca" data-nav="biblioteca"><svg class="i"><use href="#i-book"/></svg>Biblioteca</a>
-      <a href="#herramientas" data-nav="herramientas"><svg class="i"><use href="#i-drop"/></svg>Herramientas</a>
-      <a href="#comunidad" data-nav="comunidad"><svg class="i"><use href="#i-users"/></svg>Comunidad</a>
-    </nav>
-    <div class="rail-foot">
-      <div class="member"><span class="avatar" aria-hidden="true">L</span><span>Lucía Fernández<small>Comunidad Ave Mujer · ejemplo</small></span></div>
-      <a href="#" data-soon="Desde acá se abre Mi cuenta para gestionar la suscripción."><svg class="i"><use href="#i-card"/></svg>Gestionar suscripción</a>
-      <a href="#" data-soon="Abre el WhatsApp de Adriana: +54 9 341 6 660 795"><svg class="i"><use href="#i-chat"/></svg>Escribirle a Adriana</a>
-    </div>
-  </aside>
 
   <div style="min-width:0">
     <div class="proto" role="note"><span><b>Prototipo para revisión.</b><span class="proto-long"> El progreso, la alumna y los datos de Zoom son de ejemplo; los títulos de ciclos, grabaciones, biblioteca y prácticas son los reales.</span><span class="proto-short"> Datos de ejemplo.</span></span><button class="btn light demo-toggle" type="button" id="demoToggle" aria-expanded="false" aria-controls="demo"><svg class="i"><use href="#i-sliders"/></svg><span class="dl">Modo demo</span><span class="sr">Modo demo</span></button></div>
-    <header class="topbar">
-      <div class="brand"><span class="name">Ave Mujer</span><span class="label sub">Membresía</span></div>
-      <span class="avatar" aria-label="Lucía Fernández">L</span>
+    <header class="mhead">
+      <a class="logo" href="#inicio" aria-label="Ave Mujer · Membresía, ir al inicio">
+        <span class="logo-slot" id="logoSlot"><span class="wm">Ave Mujer</span></span>
+        <span class="label logo-sub">Membresía</span>
+      </a>
+      <nav class="hnav" aria-label="Secciones del escritorio">
+        <a href="#inicio" data-nav="inicio" aria-current="true">Inicio</a>
+        <a href="#recorrido" data-nav="recorrido">Mi recorrido</a>
+        <a href="#encuentros" data-nav="encuentros">Encuentros</a>
+        <a href="#escuela" data-nav="escuela">Talleres y cursos</a>
+        <a href="#biblioteca" data-nav="biblioteca">Biblioteca</a>
+        <a href="#herramientas" data-nav="herramientas">Herramientas</a>
+        <a href="#comunidad" data-nav="comunidad">Comunidad</a>
+      </nav>
+      <div class="who"><span class="avatar" aria-hidden="true">L</span><span class="who-txt">Lucía Fernández<small>Comunidad Ave Mujer · ejemplo</small></span></div>
     </header>
 
     <main class="main" id="main">
       <div class="home">
         <section class="section" id="inicio" aria-labelledby="hello-title">
-          <div class="hello">
-            <h1 class="hi" id="hello-title">Hola, Lucía</h1>
-            <p class="today" id="todayLine"></p>
-            <p class="msg">Me honra que seas parte de esta comunidad. Acá encontrás los encuentros del mes, el punto donde dejaste tu recorrido y herramientas simples para acompañar tu día, desde que te despertás hasta que te vas a dormir.</p>
+          <div class="banner">
+            <div class="hello">
+              <p class="hi" id="hello-title">Hola, Lucía</p>
+              <h1 class="welcome">Me honra que seas parte de esta comunidad</h1>
+              <p class="today" id="todayLine"></p>
+              <p class="msg">Acá encontrás los encuentros del mes, el punto donde dejaste tu recorrido y herramientas simples para acompañar tu día, desde que te despertás hasta que te vas a dormir.</p>
+            </div>
+            <article class="card continue" id="continueCard" aria-live="polite"></article>
           </div>
 
           <div class="month" aria-labelledby="month-title">
@@ -395,10 +438,7 @@ body.in-lesson .lesson-view{display:flex}
             <div class="strip-wrap"><div class="strip" id="strip" role="group" aria-label="Días del mes: elegí uno para ver qué pasa"></div></div>
           </div>
 
-          <div class="hero">
-            <article class="card continue" id="continueCard" aria-live="polite"></article>
-            <article class="card daycard" id="dayCard" aria-live="polite"></article>
-          </div>
+          <article class="card daycard wide" id="dayCard" aria-live="polite"></article>
         </section>
 
         <section class="section" id="recorrido" aria-labelledby="rec-title">
@@ -460,7 +500,7 @@ body.in-lesson .lesson-view{display:flex}
         </section>
 
         <footer class="sign">
-          <span>Comunidad Hay un Día · Membresía Ave Mujer</span>
+          <span>Comunidad Hay un Día · Membresía Ave Mujer · <a href="#" data-soon="Desde acá se abre Mi cuenta para gestionar la suscripción.">Gestionar suscripción</a></span>
           <span class="hand">es ir a vos… es volver a vos · Adriana</span>
         </footer>
       </div>
@@ -780,7 +820,7 @@ document.addEventListener("click",function(e){
   if(t.hasAttribute("data-step")){var st=+t.getAttribute("data-step"),cc=S.lesson[0],ii=S.lesson[1]+st;if(st>0&&!S.prog[cc][S.lesson[1]]){S.prog[cc][S.lesson[1]]=1;}openLesson(cc,ii);return;}
   if(t.hasAttribute("data-jump")){var tg=document.getElementById(t.getAttribute("data-jump"));if(tg)tg.scrollIntoView();return;}
 });
-document.querySelectorAll('.nav a,.tabbar a').forEach(function(a){
+document.querySelectorAll('.hnav a,.tabbar a').forEach(function(a){
   a.addEventListener("click",function(){if(document.body.classList.contains("in-lesson")){document.body.classList.remove("in-lesson");S.lesson=null;renderAll();}});
 });
 document.getElementById("stripPrev").addEventListener("click",function(){var s=document.getElementById("strip");s.scrollBy({left:-s.clientWidth*0.7,behavior:"smooth"});});
