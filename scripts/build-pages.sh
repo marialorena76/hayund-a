@@ -14,6 +14,7 @@ wrap prototipos/escritorio-mastermind/index.html docs/mastermind/index.html
 wrap prototipos/escritorio-membresia/index.html docs/membresia/index.html
 wrap prototipos/academia/index.html docs/academia/index.html
 touch docs/.nojekyll
+[ -f docs/404.html ] || echo "falta docs/404.html"
 cat > docs/index.html <<'HTML'
 <!doctype html>
 <html lang="es">
