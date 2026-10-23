@@ -45,7 +45,7 @@ small{display:block;margin-top:32px;color:var(--ink-2)}
   <h1>Prototipos <em>Hay un Día</em></h1>
   <p>Propuestas para revisar. Son páginas de prueba: no modifican el sitio hayundia.com.ar.</p>
   <ul>
-    <li><a href="mastermind/"><b>Escritorio MasterMind Ave Mujer</b><span>Agenda del mes, seguí donde dejaste, recorrido, encuentros grabados y escuela. Con modo demo.</span></a></li>
+    <li><a href="mastermind/"><b>Escritorio MasterMind Ave Mujer</b><span>Agenda del mes, sigue donde lo dejaste, recorrido, encuentros grabados y escuela. Con modo demo.</span></a></li>
     <li><a href="membresia/"><b>Escritorio Membresía Ave Mujer</b><span>Menú horizontal, banner terracota, agenda de la comunidad, talleres y cursos. Con modo demo.</span></a></li>
     <li><a href="academia/"><b>Academia Hay un Día</b><span>Plan de estudios, ¿por dónde empiezo?, cursos, talleres, posgrados y comunidades.</span></a></li>
   </ul>
